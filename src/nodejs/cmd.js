@@ -203,7 +203,7 @@ COMMANDS.takePile = function(client, args){
 	
 	pid = parseInt(args.pileid);
 	g.assignPileToPlayer(pid, n);
-	
+	COMMANDS.updateAllPiles(client, args);
 	//sys.log('taking pile');
 	//sys.log(parseInt(args.pileid));
 	//sys.log(sys.inspect(p.name));

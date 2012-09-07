@@ -138,7 +138,7 @@ function update_all_piles(json){
 		pilename = '#pile' + i.toString();
 		$(pilename + ' > label').remove();
 		for(j=0; j < json.piles[i].length;j++){
-			$(pilename).append('<label>' + json.piles[i][j] + '</label>');
+			$(pilename).append('<label>' + json.piles[i][j] + '<br/></label>');
 		}
 	}
 }

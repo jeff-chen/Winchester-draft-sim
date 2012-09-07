@@ -52,13 +52,16 @@ Game.prototype.remove = function(name) {
 
 Game.prototype.start = function(){
 	console.log('starting');
-	console.log(Object.keys(this.playerPiles));
-	if(!this.gameIsStarted){
+	console.log(Object.keys(this.playerPiles)[0]);
+	console.log(Object.keys(this.playerPiles)[1]);
+	console.log(Object.keys(this.playerPiles).length);
+	console.log(this.namesToPlayers);
+	if(!this.gameIsStarted && Object.keys(this.playerPiles).length > 1){
 	//todo: check there are exactly two players before starting, though gameIsStarted should handle that already
   	this.gameIsStarted = 1;
   	this.pile = loadPile();
     this.addToPiles();
-    this.activePlayer = 'vulpix'; //first player.name
+    this.activePlayer = Object.keys(this.playerPiles)[0]; //first player.name
 	  //also view should be rendered here along with appropriate js binding events rather than on index.html.
   }
 } 
@@ -81,7 +84,7 @@ Game.prototype.assignPileToPlayer = function(pile_id, player){
 			this.playerPiles[player].push(abc);
 		}
 		this.addToPiles();
-		setNextPlayer();
+		this.setNextPlayer();
 		console.log(this.playerPiles);
 		console.log(this.piles);
 		return(1); //this is used to tell that update was a success so view can be updated
@@ -113,6 +116,7 @@ Game.prototype.addToPiles = function(){
 	}
 }
 
+
 function getNewDeck() {
 	var a = [];
 	for(var i = 1; i <= 54; i++) {
@@ -123,8 +127,15 @@ function getNewDeck() {
 
 exports.Game = Game;
 
-function setNextPlayer(){
-	
+Game.prototype.setNextPlayer = function(){
+	x = Object.keys(this.playerPiles).indexOf(this.activePlayer);
+	y = x+1;
+	if(y >= Object.keys(this.playerPiles).length){
+		y = 0;
+	}
+	this.activePlayer = Object.keys(this.playerPiles)[y];
+	console.log('active player is');
+	console.log(this.activePlayer);
 }
 
 function reset() {
