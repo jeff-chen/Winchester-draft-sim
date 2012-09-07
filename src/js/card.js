@@ -16,6 +16,7 @@ function init() {
 }
 
 function runCmd(json) {
+	//alert(json);
 	var func = COMMANDS[json[0]];
 
 	if(func) {
@@ -35,7 +36,7 @@ function ev_reset(event) {
 
 function ev_start(event) {
 	alert('hallo');
-	send_message(['startgame', {}]);
+	send_message(['startGame', {}]);
 }
 
 function notify(json) {
@@ -120,6 +121,25 @@ function create_card(json) {
 	}
 
 }
+
+function update_all_piles(json){
+	//should this clear the pile divs first or just assume that each input represents only new cards? leaning the former
+	//alert('fubat'); //like a zubat
+	for(i=0;i<=3;i++){
+		pilename = '#pile' + i.toString();
+		for(j=0; j < json.piles[i].length;j++){
+			$(pilename).append(json.piles[i][j]);
+		}
+	}
+}
+
+COMMANDS.update_all_piles = update_all_piles;
+/*function startgame(json){
+	
+}
+
+
+COMMANDS.startgame = startgame;*/
 
 COMMANDS.create_card = create_card;
 

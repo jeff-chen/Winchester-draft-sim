@@ -50,12 +50,16 @@ Game.prototype.remove = function(name) {
 };
 
 Game.prototype.start = function(){
-	
-	//todo: check there are exactly two players before starting
-	this.gameIsStarted = 1;
-	this.pile = loadPile();
-	
-}
+	console.log(Object.keys(this.playerPiles).length);
+	if(!this.gameIsStarted){
+	//todo: check there are exactly two players before starting, though gameIsStarted should handle that already
+  	this.gameIsStarted = 1;
+  	this.pile = loadPile();
+    this.addToPiles();
+	  console.log('lolocaust');
+	  //also view should be rendered here along with appropriate js binding events rather than on index.html.
+  }
+} 
 
 Game.prototype.clients = function() {
 	var self = this;

@@ -42,6 +42,7 @@ exports.dispatch = function (client, json) {
 };
 
 COMMANDS.logon = function(client, args) {
+	//TODO: reject a logon if a game is started already
 	var	g = game.games[args.game],
 		p = game.namesToPlayers[args.name];
 
@@ -107,6 +108,17 @@ COMMANDS.startGame = function(client, args){
 	var g = game.clientsToGames[client];
 	//make sure there are 2 players in order to start
 	g.start();
+	COMMANDS.updateAllPiles(client, args);
+}
+
+COMMANDS.updateAllPiles = function(client, args){
+	var	g = game.clientsToGames[client];
+	piles = g.piles;
+	callalljs(g.clients(), ['update_all_piles', {piles:piles}]);
+}
+
+COMMANDS.movePileToPlayer = function(client, args){
+	
 }
 
 COMMANDS.updateCards = function(client, args) {
