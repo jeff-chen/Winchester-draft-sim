@@ -1,0 +1,31 @@
+body{
+	font: 0.8em "Tahoma",sans-serif;
+	background: #FFF;
+	color: #000;
+}
+h1{
+	font-size: 1.8em;
+	font-family: "Georgia", serif;
+	font-weight: normal;
+}
+div.ruler{
+	line-height: 0px;
+	height: 1px;
+	background: #000000;
+	font-size: 0px;
+	margin: 10px 0;
+	padding: 0;
+	color: #000;
+}
+
+div.container {
+	margin: 0 auto;
+	text-align: center;
+	width: 780px;
+  }
+
+div.col {
+  float: left;
+  width: 130px;
+  height: 100%;
+}

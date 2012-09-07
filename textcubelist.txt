@@ -1,0 +1,265 @@
+Isamaru, Hound of Konda
+Elite Vanguard
+Children of Korlis
+Student of Warfare
+Thalia, Guardian of Thraben
+Whipcorder
+Stoneforge Mystic
+Mistral Charger
+Blade of the Sixth Pride
+Wall of Omens
+Defiant Vanguard
+Porcelain Legionnaire
+Mirror Entity
+Lin-Sivvi, Defiant Hero
+Cloudchaser Kestrel
+Hero of Bladehold
+Reveillark
+Cloudgoat Ranger
+Exalted Angel
+Eternal Dragon
+Swords to Plowshares
+Disenchant
+Mobilization
+Oblivion Ring
+Glorious Anthem
+Bound in Silence
+Elspeth, Knight-Errant
+Faith's Fetters
+Ajani Goldmane
+Armageddon
+Day of Judgment
+Gideon Jura
+Akroma's Vengeance
+Decree of Justice
+Spined Thopter
+Fathom Seer
+Mischievous Quanar
+Chromeshell Crab
+Vendilion Clique
+Vesuvan Shapeshifter
+Brine Elemental
+Willbender
+Voidmage Apprentice
+Shaper Parasite
+Riptide Survivor
+Quicksilver Dragon
+Venser, Shaper Savant
+Phyrexian Metamorph
+Mulldrifter
+Mystical Tutor
+Ponder
+Mana Leak
+Counterspell
+Impulse
+Exclude
+Repulse
+Capsize
+Compulsive Research
+Deep Analysis
+Fact or Fiction
+Gifts Ungiven
+Jace, the Mind Sculptor
+Control Magic
+Dismiss
+Time Warp
+Future Sight
+Jace's Ingenuity
+Commandeer
+Take Possession
+Gravecrawler
+Diregraf Ghoul
+Putrid Imp
+Mesmeric Fiend
+Withered Wretch
+Bloodghast
+Nezumi Shortfang
+Oona's Prowler
+Skinthinner
+Zombie Cutthroat
+Bane of the Living
+Hypnotic Specter
+Silent Specter
+Vampire Nighthawk
+Phyrexian Rager
+Skinrender
+Shriekmaw
+Ink-Eyes, Servant of Oni
+Avatar of Woe
+Booster Tutor
+Hymn to Tourach
+Terror
+Exhume
+Demonic Tutor
+Recurring Nightmare
+Necromancy
+Liliana of the Veil
+Phyrexian Arena
+Dismember
+Stupor
+Fugue
+Living Death
+Spikeshot Elder
+Stromkirk Noble
+Jackal Pup
+Goblin Guide
+Grim Lavamancer
+Ember Hauler
+Goblin Wardriver
+Mogg War Marshal
+Frazzled Editor
+Sparksmith
+Goblin Chieftain
+Taurean Mauler
+Countryside Crusher
+Keldon Vandals
+Skizzik
+Flametongue kavu
+Siege Gang Comamnder
+Voracious Dragon
+Inferno Titan
+Firebolt
+Lightning Bolt
+Shattering Pulse
+Magma Jet
+Incinerate
+Sulfuric Vortex
+Slagstorm
+Threaten
+Wheel of Fortune
+Blast from the Past
+Flame Javelin
+Demolish
+Wild Ricochet
+Form of the Dragon
+Demonfire
+Joraga Treespeaker
+Wild Nacatl
+Birds of Paradise
+Llanowar Elves
+Wolfbitten Captive
+Sakura Tribe Elder
+Scavenging Ooze
+Beastbreaker of Bala Ged
+Strangleroot Geist
+Fauna Shaman
+Vinelasher Kudzu
+Rofellos, Llanowar Emissary
+River Boa
+Uktabi Orangutan
+Wolfir Avenger
+Eternal Witness
+Troll Ascetic
+Chameleon Colossus
+Obstinate Baloth
+Blastoderm
+Cockatrice
+Acidic Slime
+Thragtusk
+Penumbra Wurm
+Verdant Force
+Rancor
+Sylvan Library
+Naturalize
+Regrowth
+Survival of the Fittest
+Kodama's Reach
+Harmonize
+Garruk Wildspeaker
+Primal Command
+Plow Under
+Duergar Hedge Mage
+Boggart Ram Gang
+Kitchen Finks
+Augury Adept
+Murderous Redcap
+Huntmaster of the Fells
+Lord of Extinction
+Oona, Queen of the Fae
+Simic Sky Swallower
+Fire/Ice
+Life/Death
+Goblin Trenches
+Vindicate
+Voidslime
+Rare-B-Gone
+Prophetic Bolt
+Mirari's Wake
+Venser, the Sojourner
+Debtor's Knell
+Who/What/Where/When/Why
+Leaden Myr
+Silver Myr
+Copper Myr
+Iron Myr
+Gold Myr
+Steel Overseer
+Immolating Souleater
+Bottle Gnomes
+Palladium Myr
+Scuttlemutt
+Juggernaut
+Lodestone Golem
+Solemn Simulacrum
+Su-chi
+Masticore
+Precursor Golem
+Karn, Silver Golem
+Duplicant
+Wurmcoil Engine
+Triskelavus
+Sensei's Divining Top
+Basilisk Collar
+Mana Vault
+Sol Ring
+Skullclamp
+Brittle Effigy
+Bonesplitter
+Shrine of Loyal Legions
+Lightning Greaves
+Ratchet Bomb
+Shrine of Burning Rage
+Crystal Ball
+Crystal Shard
+Chimeric Idol
+Sword of Body and Mind
+Sword of Light and Shadow
+Sword of Feast and Famine
+Grafted Wargreaves
+Oblivion Stone
+Erratic Portal
+Thran Dynamo
+Icy Manipulator
+Phyrexian Processor
+Power Matrix
+Bargaining Table
+Mind's Eye
+Gauntlet of Power
+Batterskull
+Obelisk of Alara
+Mindslaver
+Badlands
+Plateau
+Taiga
+Temple Garden
+Hallowed Fountain
+Godless Shrine
+Steam Vents
+Breeding Pool
+Watery Grave
+Golgari Rot Farm
+Celestial Colonnade
+Creepy Tar Pit
+Lavaclaw Reaches
+Raging Ravine
+Stirring Wildwood
+Tranquil Thicket
+Secluded Steppe
+Lonely Sandbar
+Barren Moor
+Forgotten Cove
+Maze of Ith
+Treetop Village
+Faerie Conclave
+Volrath's Stronghold
+City of Ass
