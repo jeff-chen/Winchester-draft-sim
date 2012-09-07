@@ -10,6 +10,8 @@ function init() {
 	$('#reset').bind('click', ev_reset);
   $('#startgame').bind('click', ev_start);
 
+  $('.takepile').bind('click', ev_takepile);  
+
 	$(window).unload(function() {
         	send_message(['disconnect', {}]);
         });
@@ -30,12 +32,19 @@ function ev_draw(event) {
 	send_message(['draw', {}]);
 }
 
+function ev_takepile(event){
+	pileid = $(this)[0].id[4];
+	send_message(['takePile', {pileid:pileid}])
+	//alert(pileid);
+	//alert(parseInt(pileid));
+}
+
 function ev_reset(event) {
 	send_message(['reset', {}]);
 }
 
 function ev_start(event) {
-	alert('hallo');
+	//alert('hallo');
 	send_message(['startGame', {}]);
 }
 
@@ -127,8 +136,9 @@ function update_all_piles(json){
 	//alert('fubat'); //like a zubat
 	for(i=0;i<=3;i++){
 		pilename = '#pile' + i.toString();
+		$(pilename + ' > label').remove();
 		for(j=0; j < json.piles[i].length;j++){
-			$(pilename).append(json.piles[i][j]);
+			$(pilename).append('<label>' + json.piles[i][j] + '</label>');
 		}
 	}
 }

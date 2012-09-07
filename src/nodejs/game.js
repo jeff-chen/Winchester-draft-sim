@@ -29,6 +29,7 @@ function Game(name, pass, admin) {
 	this.namesToCards = {};
 	this.playerPiles = {};
 	this.gameIsStarted = 0;
+	this.activePlayer = '';
 	this.piles = [[],[],[],[]];
 	this.clientsToPlayers = {};
 	this.clientsToClients = {};
@@ -56,7 +57,8 @@ Game.prototype.start = function(){
   	this.gameIsStarted = 1;
   	this.pile = loadPile();
     this.addToPiles();
-	  console.log('lolocaust');
+    this.activePlayer = 'vulpix'; //first player.name
+	  //console.log('lolocaust');
 	  //also view should be rendered here along with appropriate js binding events rather than on index.html.
   }
 } 
@@ -77,8 +79,7 @@ Game.prototype.reset = function() {
 };
 
 function loadPile(){
-	return util.initPile(90);
-	
+	return util.initPile(90);	
 }
 
 Game.prototype.addToPiles = function(){

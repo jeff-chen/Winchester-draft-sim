@@ -193,3 +193,7 @@ COMMANDS.reset = function(client, args) {
 	g.reset();
 	callalljs(g.clients(), ['reset', {}]);
 };
+
+COMMANDS.takePile = function(client, args){
+	
+}
