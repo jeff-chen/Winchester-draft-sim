@@ -8,6 +8,7 @@ function init() {
 	$('#logonbutton').bind('click', ev_logon);
 	$('#draw').bind('click', ev_draw);
 	$('#reset').bind('click', ev_reset);
+  $('#startgame').bind('click', ev_start);
 
 	$(window).unload(function() {
         	send_message(['disconnect', {}]);
@@ -30,6 +31,11 @@ function ev_draw(event) {
 
 function ev_reset(event) {
 	send_message(['reset', {}]);
+}
+
+function ev_start(event) {
+	alert('hallo');
+	send_message(['startgame', {}]);
 }
 
 function notify(json) {
@@ -62,6 +68,7 @@ function logon(json) {
 	$('#main').show();
 	if(!json.admin) {
 		$('#reset').hide();
+		$('#startgame').hide();
 	} else {
 		admin = true;
 	}

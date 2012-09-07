@@ -28,7 +28,7 @@ function Game(name, pass, admin) {
 	this.pile = loadPile();
 	this.namesToCards = {};
 	this.playerPiles = {};
-	this.gameisstarted = 0;
+	this.gameIsStarted = 0;
 	this.piles = [[],[],[],[]];
 	this.clientsToPlayers = {};
 	this.clientsToClients = {};
@@ -50,6 +50,9 @@ Game.prototype.remove = function(name) {
 };
 
 Game.prototype.start = function(){
+	
+	//todo: check there are exactly two players before starting
+	this.gameIsStarted = 1;
 	this.pile = loadPile();
 	
 }
@@ -74,11 +77,12 @@ function loadPile(){
 	
 }
 
-function addToPiles(){
-	for(abc = 0; abc < piles.length; abc++){
+Game.prototype.addToPiles = function(){
+	for(abc = 0; abc < this.piles.length; abc++){
 		tempcard = this.pile.pop();
-		
-		
+		if(tempcard){
+			this.piles[abc].push(tempcard);
+		}
 	}
 }
 
@@ -99,3 +103,4 @@ function reset() {
 }
 
 exports.reset = reset;
+

@@ -103,6 +103,11 @@ COMMANDS.logon = function(client, args) {
 	}
 };
 
+COMMANDS.startGame = function(client, args){
+	var g = game.clientsToGames[client];
+	//make sure there are 2 players in order to start
+	g.start();
+}
 
 COMMANDS.updateCards = function(client, args) {
 	var	g = game.clientsToGames[client];
@@ -133,13 +138,26 @@ COMMANDS.removePlayer = function(client, args) {
 	callalljs(g.clients(), ['remove_player', {name: args.name}]);
 };
 
+COMMANDS.drawPile = function(client, args){
+	var	g = game.clientsToGames[client],
+		p = g.clientsToPlayers[client],
+		//abc = g.pile.pop(),
+		
+		c = g.deck.pop(),
+		n = args.name || p.name;
+		pid = args.id;
+}
+
 COMMANDS.draw = function(client, args) {
 	var	g = game.clientsToGames[client],
 		p = g.clientsToPlayers[client],
-		abc = g.pile.pop(),
+		//abc = g.pile.pop(),
+		
 		c = g.deck.pop(),
 		n = args.name || p.name;
 
+  g.addToPiles();
+  sys.log(sys.inspect(g.piles));
 	sys.log(sys.inspect(g.namesToCards));
 	sys.log(sys.inspect(abc));
 	//sys.log(sys.inspect(p));
@@ -151,8 +169,8 @@ COMMANDS.draw = function(client, args) {
 	} else {
 		sys.log('Card: ' + c);
 		g.namesToCards[n].push(c);
-		g.playerPiles[n].push(abc);
-		sys.log(sys.inspect(g.playerPiles));
+		//g.playerPiles[n].push(abc);
+		//sys.log(sys.inspect(g.playerPiles));
 		callalljs(g.clients(), ['create_card', {player: n, id: c}]);
 	}
 };
