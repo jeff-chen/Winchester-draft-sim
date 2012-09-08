@@ -106,9 +106,20 @@ COMMANDS.logon = function(client, args) {
 
 COMMANDS.startGame = function(client, args){
 	var g = game.clientsToGames[client];
-	//make sure there are 2 players in order to start
 	g.start();
+	COMMANDS.updateView(client, args);
+}
+
+COMMANDS.updateView = function(client, args){
 	COMMANDS.updateAllPiles(client, args);
+	COMMANDS.updatePlayerPiles(client, args);
+	COMMANDS.updateActivePlayer(client, args);
+}
+
+COMMANDS.updatePlayerPiles = function(client, args){
+	var	g = game.clientsToGames[client];
+	piles = g.playerPiles;
+	callalljs(g.clients(), ['update_player_piles', {piles:piles}]);
 }
 
 COMMANDS.updateAllPiles = function(client, args){
@@ -117,8 +128,10 @@ COMMANDS.updateAllPiles = function(client, args){
 	callalljs(g.clients(), ['update_all_piles', {piles:piles}]);
 }
 
-COMMANDS.movePileToPlayer = function(client, args){
-	
+COMMANDS.updateActivePlayer = function(client, args){
+	/*var	g = game.clientsToGames[client];
+	piles = g.piles;
+	callalljs(g.clients(), ['update_all_piles', {piles:piles}]);*/
 }
 
 COMMANDS.updateCards = function(client, args) {
@@ -203,9 +216,5 @@ COMMANDS.takePile = function(client, args){
 	
 	pid = parseInt(args.pileid);
 	g.assignPileToPlayer(pid, n);
-	COMMANDS.updateAllPiles(client, args);
-	//sys.log('taking pile');
-	//sys.log(parseInt(args.pileid));
-	//sys.log(sys.inspect(p.name));
-	//sys.log(sys.inspect(activeplayer));
+	COMMANDS.updateView(client, args);
 }

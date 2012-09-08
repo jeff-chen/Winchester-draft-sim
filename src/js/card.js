@@ -134,14 +134,27 @@ function create_card(json) {
 function update_all_piles(json){
 	//should this clear the pile divs first or just assume that each input represents only new cards? leaning the former
 	//alert('fubat'); //like a zubat
-	for(i=0;i<=3;i++){
+	for(var i=0;i<=3;i++){
 		pilename = '#pile' + i.toString();
 		$(pilename + ' > label').remove();
-		for(j=0; j < json.piles[i].length;j++){
+		for(var j=0; j < json.piles[i].length;j++){
 			$(pilename).append('<label>' + json.piles[i][j] + '<br/></label>');
 		}
 	}
 }
+
+function update_player_piles(json){
+	for(var i in json.piles){
+		pilename = '#' + i;
+		$(pilename + ' > label').remove();
+		//alert(pilename + ' > label');
+		for(var j in json.piles[i]){
+			$(pilename).append('<label>' + json.piles[i][j] + '<br/></label>');
+		}
+	}
+}
+
+COMMANDS.update_player_piles = update_player_piles;
 
 COMMANDS.update_all_piles = update_all_piles;
 /*function startgame(json){
