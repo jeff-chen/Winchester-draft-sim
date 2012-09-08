@@ -64,12 +64,13 @@ function dispatchURL(path, pieces, res) {
 exports.startServer = function(port) {
 	port = port || 80;
 	server.listen(port);
-
+  console.log('listening on port: ' + port);
 	var socket = io.listen(server);
 
 	socket.configure(function() {
 		socket.set('log level', config.loglevel);
 	});
+	
   
 	socket.sockets.on('connection', function(client) {
 		client.toString = function() { return client.id; };
