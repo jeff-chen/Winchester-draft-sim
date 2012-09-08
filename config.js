@@ -1,4 +1,4 @@
 module.exports = {
-	'port' : 3141
+	'port' : process.env.PORT || 5000
 ,	'loglevel' : 1
 };
