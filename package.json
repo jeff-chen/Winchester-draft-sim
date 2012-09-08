@@ -1,1 +1,16 @@
+{
+	"name" : "winchester"
+,	"version" : "0.0.1"
+,	"main" : "./winchester.js"
+,	"description" : "A little webapp simulating a cube winchester draft for 2 people."
+
+,	"dependencies" : {
+		"socket.io" : "0.9.x"
+	}
+,	"engines" : {
+		"node" : "0.8.x",
+		"npm" : "1.1.x"
+	}
+,	"license" : "GPLv3"
+}
 
