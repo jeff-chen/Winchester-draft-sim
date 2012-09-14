@@ -87,6 +87,7 @@ function logon(json) {
 COMMANDS.logon = logon;
 
 function add_player(json) {
+	/*
 	if(!PLAYERS[json.name]) {
 		if(admin) {
 			if(!json.admin) {
@@ -106,6 +107,7 @@ function add_player(json) {
 		PLAYERS[json.name] = p;
 		$('#main').append(p);
 	}
+	*/
 }
 
 COMMANDS.add_player = add_player;
