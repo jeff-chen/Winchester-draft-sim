@@ -1,7 +1,13 @@
 # Files
 
+.DS_Store
+
 # Filetypes
 *.swp
 .*.swp
 
+
 # Paths
+
+node_modules/
+
