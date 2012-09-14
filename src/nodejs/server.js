@@ -33,6 +33,8 @@ var server = http.createServer(function(req, res) {
 		res.writeHead(200, {'Content-Type': 'text/html'});
 		res.write(index);
 		res.end();
+	} else if(pieces[1] && pieces[1] === 'api') {
+		dispatchAPI(path, pieces, res);
 	} else if(pieces[2] != null) {
 		dispatchURL(path, pieces, res);
 	} else {
@@ -56,6 +58,18 @@ function dispatchURL(path, pieces, res) {
 				res.end();
 			}
 		});
+	} else {
+		res.end();
+	}
+}
+
+function dispatchAPI(path, pieces, res) {
+	var head = HEAD_INFO.html;
+
+	res.writeHead(200, {'Content-Type': head.contentType});
+	if(pieces[2] === 'getPort') {
+		res.write(config.port, head.encoding);
+		res.end();
 	} else {
 		res.end();
 	}
