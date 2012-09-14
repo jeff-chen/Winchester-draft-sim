@@ -70,7 +70,7 @@ function dispatchAPI(path, pieces, res) {
 
 	res.writeHead(200, {'Content-Type': head.contentType});
 	if(pieces[2] === 'getPort') {
-		res.write(config.port, head.encoding);
+		res.write('' + config.port, head.encoding);
 		res.end();
 	} else {
 		res.end();
