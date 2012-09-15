@@ -68,17 +68,21 @@ COMMANDS.logon = function(client, args) {
 			}
 		} else {
 			if(args.gamepass === g.pass) {
-				p = new game.Player(args.name, args.namepass);
-				game.namesToPlayers[args.name] = p;
-				g.clientsToPlayers[client] = p;
-				g.clientsToClients[client] = client;
-				g.namesToClients[args.name] = client;
-				game.clientsToGames[client] = g;
-				g.namesToCards[args.name] = [];
-				g.playerPiles[args.name] = [];
-				calljs(client, ['logon', {}]);
-				callalljs(g.clients(), ['add_player', {name: args.name}]);
-				COMMANDS.updateCards(client);
+				if(g.gameIsStarted){
+					calljs(client, ['notify', {message: 'That game is already started!'}]);
+				} else {
+				  p = new game.Player(args.name, args.namepass);
+				  game.namesToPlayers[args.name] = p;
+				  g.clientsToPlayers[client] = p;
+				  g.clientsToClients[client] = client;
+				  g.namesToClients[args.name] = client;
+				  game.clientsToGames[client] = g;
+				  g.namesToCards[args.name] = [];
+				  g.playerPiles[args.name] = [];
+				  calljs(client, ['logon', {}]);
+				  callalljs(g.clients(), ['add_player', {name: args.name}]);
+				  COMMANDS.updateCards(client);
+				}
 			} else {
 				calljs(client, ['notify', {message: 'Wrong game pass!'}]);
 			}
@@ -174,10 +178,14 @@ COMMANDS.updateCards = function(client, args) {
 
 COMMANDS.disconnect = function(client, args) {
 	var g = game.clientsToGames[client];
-
-	delete g.clientsToPlayers[client];
-	delete g.clientsToClients[client];
-	delete game.clientsToGames[client];
+	
+	//sometimes someone does not properly log on but still closes the window causing this function to be called when it shouldn't.
+	//hence the conditional
+  if(g){
+  	delete g.clientsToPlayers[client];
+  	delete g.clientsToClients[client];
+  	delete game.clientsToGames[client];
+  }
 };
 
 COMMANDS.removePlayer = function(client, args) {
