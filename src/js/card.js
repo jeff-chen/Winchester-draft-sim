@@ -87,8 +87,10 @@ function logon(json) {
 COMMANDS.logon = logon;
 
 function add_player(json) {
-	/*
-	if(!PLAYERS[json.name]) {
+	//display only the particular player's cards
+	
+	
+	/*if(!PLAYERS[json.name]) {
 		if(admin) {
 			if(!json.admin) {
 				var remove = $('<input type="button">').val('X').bind('click', function() {
@@ -106,8 +108,8 @@ function add_player(json) {
 		}
 		PLAYERS[json.name] = p;
 		$('#main').append(p);
-	}
-	*/
+	}*/
+	
 }
 
 COMMANDS.add_player = add_player;
@@ -134,7 +136,6 @@ function create_card(json) {
 }
 
 function update_all_piles(json){
-	//should this clear the pile divs first or just assume that each input represents only new cards? leaning the former
 	//alert('fubat'); //like a zubat
 	for(var i=0;i<=3;i++){
 		pilename = '#pile' + i.toString();
@@ -146,25 +147,36 @@ function update_all_piles(json){
 }
 
 function update_player_piles(json){
-	for(var i in json.piles){
-		pilename = '#' + i;
-		$(pilename + ' > label').remove();
-		//alert(pilename + ' > label');
-		for(var j in json.piles[i]){
-			$(pilename).append('<label>' + json.piles[i][j] + '<br/></label>');
-		}
+	pilenametype = '#cardstaken';
+	$(pilenametype + ' > label').remove();
+	for(var j in json.playerspile){
+		$(pilenametype).append('<label>' + json.playerspile[j] + '<br/></label>');
 	}
 }
+
+function update_active_player(json){
+	$('.takepile').show();
+	$('.notice').html(json.labeltext);
+}
+
+function update_inactive_player(json){
+	$('.takepile').hide();
+	$('.notice').html(json.labeltext);
+}
+
+function hide_start_button(json){
+	$('input#startgame').remove();
+}
+
+COMMANDS.hide_start_button = hide_start_button;
+
+COMMANDS.update_active_player = update_active_player;
+
+COMMANDS.update_inactive_player = update_inactive_player;
 
 COMMANDS.update_player_piles = update_player_piles;
 
 COMMANDS.update_all_piles = update_all_piles;
-/*function startgame(json){
-	
-}
-
-
-COMMANDS.startgame = startgame;*/
 
 COMMANDS.create_card = create_card;
 

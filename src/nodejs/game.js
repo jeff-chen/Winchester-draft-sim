@@ -54,14 +54,15 @@ Game.prototype.start = function(){
 	console.log('starting');
 	console.log(Object.keys(this.playerPiles)[0]);
 	console.log(Object.keys(this.playerPiles)[1]);
-	console.log(Object.keys(this.playerPiles).length);
-	console.log(this.namesToPlayers);
+	console.log(this.playerPiles);
+	//console.log(this.namesToPlayers);
 	if(!this.gameIsStarted && Object.keys(this.playerPiles).length > 1){
+	//if(!this.gameIsStarted){
 	//todo: check there are exactly two players before starting, though gameIsStarted should handle that already
   	this.gameIsStarted = 1;
   	this.pile = loadPile();
     this.addToPiles();
-    this.activePlayer = Object.keys(this.playerPiles)[0]; //first player.name
+    this.activePlayer = Object.keys(this.playerPiles)[Math.floor(Math.random()*Object.keys(this.playerPiles).length)]; //first player.name
 	  //also view should be rendered here along with appropriate js binding events rather than on index.html.
   }
 } 

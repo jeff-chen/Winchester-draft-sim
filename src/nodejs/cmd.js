@@ -108,18 +108,37 @@ COMMANDS.startGame = function(client, args){
 	var g = game.clientsToGames[client];
 	g.start();
 	COMMANDS.updateView(client, args);
+	if(g.gameIsStarted){
+		COMMANDS.hideStartButton(client, args);
+	}
 }
 
+COMMANDS.hideStartButton = function(client,args){
+	var g = game.clientsToGames[client];
+	callalljs(g.clients(), ['hide_start_button', {}]);
+}
+
+
 COMMANDS.updateView = function(client, args){
-	COMMANDS.updateAllPiles(client, args);
-	COMMANDS.updatePlayerPiles(client, args);
-	COMMANDS.updateActivePlayer(client, args);
+	var g = game.clientsToGames[client];
+	
+	if(g.gameIsStarted){
+  	COMMANDS.updateAllPiles(client, args);
+	  COMMANDS.updatePlayerPiles(client, args);
+	  COMMANDS.updateActivePlayer(client, args);
+  }
 }
 
 COMMANDS.updatePlayerPiles = function(client, args){
 	var	g = game.clientsToGames[client];
-	piles = g.playerPiles;
-	callalljs(g.clients(), ['update_player_piles', {piles:piles}]);
+	
+	var piles = g.playerPiles;
+
+	for(var playername in piles){
+		var tempclient = g.namesToClients[playername];
+		var playerspile = piles[playername];
+		calljs(tempclient, ['update_player_piles', {playerspile:playerspile}]);
+	}
 }
 
 COMMANDS.updateAllPiles = function(client, args){
@@ -129,14 +148,22 @@ COMMANDS.updateAllPiles = function(client, args){
 }
 
 COMMANDS.updateActivePlayer = function(client, args){
-	/*var	g = game.clientsToGames[client];
-	piles = g.piles;
-	callalljs(g.clients(), ['update_all_piles', {piles:piles}]);*/
+	var	g = game.clientsToGames[client];
+	var ap = g.activePlayer;
+	var piles = g.playerPiles;
+	labeltext = ("It's " + ap + "'s turn!");
+	for(var playername in piles){
+		if(playername == ap){
+			calljs(g.namesToClients[playername], ['update_active_player', {labeltext:labeltext}]);
+		} else {
+			calljs(g.namesToClients[playername], ['update_inactive_player', {labeltext:labeltext}]);
+		}
+	}
 }
 
 COMMANDS.updateCards = function(client, args) {
 	var	g = game.clientsToGames[client];
-
+  
 	for(k in g.namesToCards) {
 		calljs(client, ['add_player', {name: k}]);
 		for(j in g.namesToCards[k]) {
@@ -173,7 +200,7 @@ COMMANDS.drawPile = function(client, args){
 		pid = args.id;
 }
 
-COMMANDS.draw = function(client, args) {
+/*COMMANDS.draw = function(client, args) {
 	var	g = game.clientsToGames[client],
 		p = g.clientsToPlayers[client],
 		//abc = g.pile.pop(),
@@ -198,7 +225,7 @@ COMMANDS.draw = function(client, args) {
 		//sys.log(sys.inspect(g.playerPiles));
 		callalljs(g.clients(), ['create_card', {player: n, id: c}]);
 	}
-};
+};*/
 
 COMMANDS.reset = function(client, args) {
 	var	g = game.clientsToGames[client];

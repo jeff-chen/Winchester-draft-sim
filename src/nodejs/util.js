@@ -14,7 +14,6 @@ function getRandom(arr, size) {
   var copy = arr.slice(0), rand = [];
   for (var i = 0; i < size && i < copy.length; i++) {
     var index = Math.floor(Math.random() * copy.length);
-    console.log(index);
     //console.log(copy.splice(index, 1)[0]);
     rand.push(copy.splice(index, 1)[0]);
   }
@@ -29,10 +28,6 @@ exports.initPile = function(size) {
 
 	var poo = [];
 	var x = getRandom(cubecards, size);
-
-	for(i in x) {
-	    console.log(x[i]);
-	}
 	console.log('foobat');
 	return(x);
 }
