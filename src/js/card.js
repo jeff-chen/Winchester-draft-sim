@@ -87,6 +87,11 @@ function logon(json) {
 COMMANDS.logon = logon;
 
 function add_player(json) {
+	if(!PLAYERS[json.name]) {
+		var p = $('<li>').attr('id', json.name).append(json.name).addClass('col');
+		PLAYERS[json.name] = p;
+		$('ul#playersul').append(p);
+	}
 	//display only the particular player's cards
 	
 	
