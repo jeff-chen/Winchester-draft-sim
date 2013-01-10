@@ -20,14 +20,60 @@ function getRandom(arr, size) {
   return rand;
 }
 
+function flatten(array){
+    var flat = [];
+    for (var i = 0, l = array.length; i < l; i++){
+        var type = Object.prototype.toString.call(array[i]).split(' ').pop().split(']').shift().toLowerCase();
+        if (type) { flat = flat.concat(/^(array|collection|arguments|object)$/.test(type) ? flatten(array[i]) : array[i]); }
+    }
+    return flat;
+}
+
+shuffle = function(o){ //v1.0
+    for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+};
+
 
 exports.initPile = function(size) {
-	//the following is test code
+	//the final thing returned is a list of names from the pool
 	var fs = require('fs');
-	var cubecards = fs.readFileSync('textcubelist.txt').toString().split("\n");
+	//var cubecards = fs.readFileSync('textcubelist.txt').toString().split("\n");
 
-	var poo = [];
-	var x = getRandom(cubecards, size);
+  var x = [];
+
+  //make packs
+  for(i=0;i<6;i++){
+	  var commons = fs.readFileSync('rtrcommons.txt').toString().split("\n");
+	  var y = getRandom(commons, 10);
+	  x.push(y);
+	
+		var uncommons = fs.readFileSync('rtruncommons.txt').toString().split("\n");
+	  var y = getRandom(uncommons, 3);
+	  x.push(y);
+	
+	  var rarelist = fs.readFileSync('rtrrares.txt').toString().split("\n");
+	  var rarelist2 = fs.readFileSync('rtrrares.txt').toString().split("\n");
+	  var mythiclist = fs.readFileSync('rtrmythics.txt').toString().split("\n");
+	  rarelist.push(rarelist2);
+	  rarelist.push(mythiclist);
+	  rarelist = flatten(rarelist);
+	
+	  /*for(n in rarelist){
+	     console.log(rarelist[n]);
+	  }*/
+	  var y = getRandom(rarelist, 1);
+	  x.push(y);
+  }
+
+  x = flatten(x);
+  x = shuffle(x);
+  //randomize x somehow
+	//var x = getRandom(cubecards, size);
+
+	for(i in x) {
+	    console.log(x[i]);
+	}
 	console.log('foobat');
 	return(x);
 }
