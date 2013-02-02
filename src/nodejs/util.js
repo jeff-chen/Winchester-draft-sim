@@ -35,41 +35,39 @@ shuffle = function(o){ //v1.0
 };
 
 
-exports.initPile = function(size) {
+exports.initPile = function(size, mode) {
 	//the final thing returned is a list of names from the pool
 	var fs = require('fs');
-	//var cubecards = fs.readFileSync('textcubelist.txt').toString().split("\n");
+	var x = [];
+	console.log("the mode is");
+	console.log(mode);
+	if(typeof mode === 'undefined' || mode.toLowerCase() == 'cube' || mode.length == 0){
+	  var cubecards = fs.readFileSync('textcubelist.txt').toString().split("\n");
+	  var x = getRandom(cubecards, size);
+  } else {
+  // RTR
+    for(i=0;i<6;i++){
+	    var commons = fs.readFileSync(mode + 'commons.txt').toString().split("\n");
+	    var y = getRandom(commons, 10);
+	    x.push(y);
+	  
+	  	var uncommons = fs.readFileSync(mode + 'uncommons.txt').toString().split("\n");
+	    var y = getRandom(uncommons, 3);
+	    x.push(y);
+	  
+	    var rarelist = fs.readFileSync(mode + 'rares.txt').toString().split("\n");
+	    var rarelist2 = fs.readFileSync(mode + 'rares.txt').toString().split("\n");
+	    var mythiclist = fs.readFileSync(mode + 'mythics.txt').toString().split("\n");
+	    rarelist.push(rarelist2);
+	    rarelist.push(mythiclist);
+	    rarelist = flatten(rarelist);
 
-  var x = [];
-
-  //make packs
-  for(i=0;i<6;i++){
-	  var commons = fs.readFileSync('rtrcommons.txt').toString().split("\n");
-	  var y = getRandom(commons, 10);
-	  x.push(y);
-	
-		var uncommons = fs.readFileSync('rtruncommons.txt').toString().split("\n");
-	  var y = getRandom(uncommons, 3);
-	  x.push(y);
-	
-	  var rarelist = fs.readFileSync('rtrrares.txt').toString().split("\n");
-	  var rarelist2 = fs.readFileSync('rtrrares.txt').toString().split("\n");
-	  var mythiclist = fs.readFileSync('rtrmythics.txt').toString().split("\n");
-	  rarelist.push(rarelist2);
-	  rarelist.push(mythiclist);
-	  rarelist = flatten(rarelist);
-	
-	  /*for(n in rarelist){
-	     console.log(rarelist[n]);
-	  }*/
-	  var y = getRandom(rarelist, 1);
-	  x.push(y);
+	    var y = getRandom(rarelist, 1);
+	    x.push(y);
+    }
   }
-
   x = flatten(x);
   x = shuffle(x);
-  //randomize x somehow
-	//var x = getRandom(cubecards, size);
 
 	for(i in x) {
 	    console.log(x[i]);

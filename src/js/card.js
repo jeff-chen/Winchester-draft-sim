@@ -3,6 +3,12 @@ var admin = false;
 var COMMANDS = {};
 var PLAYERS = {};
 
+function WizardsAutoCard (cardname) { 
+  windowName = "WotCWindow";
+  params = "toolbar=0, location=0, directories=0, status=0,menubar=0, scrollbars=0, resizable=0, width=450, height=400";
+  win = window.open("http://www.wizards.com/magic/autocard.asp?name="+cardname, windowName, params);
+}
+
 function init() {
 	$('#main').hide();
 	$('#logonbutton').bind('click', ev_logon);
@@ -45,7 +51,13 @@ function ev_reset(event) {
 
 function ev_start(event) {
 	//alert('hallo');
-	send_message(['startGame', {}]);
+	game_mode = $('input[name=draftformat]:checked').val();
+	send_message(['startGame', {mode:game_mode}]);
+	//if($('input#Cube').attr('checked')){
+	//	send_message(['startGame', {mode:'cube'}]);
+	//} else {
+	//	send_message(['startGame', {mode:'rtr'}])
+	//}
 }
 
 function notify(json) {
@@ -79,6 +91,7 @@ function logon(json) {
 	if(!json.admin) {
 		$('#reset').hide();
 		$('#startgame').hide();
+		$('.adminonly').hide();
 	} else {
 		admin = true;
 	}
@@ -92,29 +105,6 @@ function add_player(json) {
 		PLAYERS[json.name] = p;
 		$('ul#playersul').append(p);
 	}
-	//display only the particular player's cards
-	
-	
-	/*if(!PLAYERS[json.name]) {
-		if(admin) {
-			if(!json.admin) {
-				var remove = $('<input type="button">').val('X').bind('click', function() {
-					send_message(['removePlayer', {name: json.name}]);
-				});
-			} else {
-				var remove = $('<span>').text(':)');
-			};
-			var draw = $('<input type="button">').val(json.name).bind('click', function() {
-				send_message(['draw', {name: json.name}]);
-			});
-			var p = $('<div>').attr('id', json.name).append($('<p>').append(draw).append(remove)).addClass('col');
-		} else {
-			var p = $('<div>').attr('id', json.name).append($('<p>').text(json.name)).addClass('col');
-		}
-		PLAYERS[json.name] = p;
-		$('#main').append(p);
-	}*/
-	
 }
 
 COMMANDS.add_player = add_player;
@@ -146,16 +136,22 @@ function update_all_piles(json){
 		pilename = '#pile' + i.toString();
 		$(pilename + ' > label').remove();
 		for(var j=0; j < json.piles[i].length;j++){
-			$(pilename).append('<label>' + json.piles[i][j] + '<br/></label>');
+			$(pilename).append(cardize(json.piles[i][j]));
+			//$(pilename).append('<label>' + json.piles[i][j] + '<br/></label>');
 		}
 	}
+}
+
+function cardize(text){
+	return('<label><a href=\"#\" class=\"mtgcard\" onmouseover=>' + text + '</a><br/></label>');
 }
 
 function update_player_piles(json){
 	pilenametype = '#cardstaken';
 	$(pilenametype + ' > label').remove();
 	for(var j in json.playerspile){
-		$(pilenametype).append('<label>' + json.playerspile[j] + '<br/></label>');
+		$(pilenametype).append(cardize(json.playerspile[j]));
+		//$(pilenametype).append('<label><a href=\"\" class=\"mtgcard\" target=\"_blank\">' + json.playerspile[j] + '</a><br/></label>');
 	}
 }
 

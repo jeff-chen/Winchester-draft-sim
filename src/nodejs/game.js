@@ -25,7 +25,7 @@ function Game(name, pass, admin) {
 	this.name = name;
 	this.pass = pass;
 	this.deck = getNewDeck();
-	this.pile = loadPile();
+	//this.pile = loadPile();
 	this.namesToCards = {};
 	this.playerPiles = {};
 	this.gameIsStarted = 0;
@@ -50,7 +50,7 @@ Game.prototype.remove = function(name) {
 	return [c, p];
 };
 
-Game.prototype.start = function(){
+Game.prototype.start = function(mode){
 	console.log('starting');
 	console.log(Object.keys(this.playerPiles)[0]);
 	console.log(Object.keys(this.playerPiles)[1]);
@@ -60,7 +60,7 @@ Game.prototype.start = function(){
 	//if(!this.gameIsStarted){
 	//todo: check there are exactly two players before starting, though gameIsStarted should handle that already
   	this.gameIsStarted = 1;
-  	this.pile = loadPile();
+  	this.pile = loadPile(mode);
     this.addToPiles();
     this.activePlayer = Object.keys(this.playerPiles)[Math.floor(Math.random()*Object.keys(this.playerPiles).length)]; //first player.name
 	  //also view should be rendered here along with appropriate js binding events rather than on index.html.
@@ -104,8 +104,8 @@ Game.prototype.reset = function() {
 	}
 };
 
-function loadPile(){
-	return util.initPile(90);	
+function loadPile(mode){
+	return util.initPile(90,mode);	
 }
 
 Game.prototype.addToPiles = function(){

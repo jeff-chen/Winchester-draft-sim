@@ -11,6 +11,7 @@
 <script type="text/javascript" src="js/jquery.contextmenu.js"></script>
 <script type="text/javascript" src="/socket.io/socket.io.js"></script>
 <script type="text/javascript" src="js/card.js"></script>
+<script type="text/javascript" src="js/autocard.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
 		init();
@@ -37,7 +38,12 @@
 <h1>Winchester Draft!</h1>
 <div class="ruler"></div>
 	<form method="get" action="">
+		<div class='adminonly'>
+		<input type="radio" name='draftformat' value='RTR' id='RTR'>RTR boosters
+		<input type="radio" name='draftformat' value='GTC' id='GTC'>GTC boosters
+		<input type="radio" name='draftformat' value='Cube' id='Cube'>Cube
 		<input type="button" id='startgame' value="Start Game"/>
+		</div>
 	</form>
 <label class="notice"></label>
 <div id='playerslist'><h4>players in room</h4><ul id='playersul'></ul></div>

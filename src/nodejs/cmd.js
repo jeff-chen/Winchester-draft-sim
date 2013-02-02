@@ -110,7 +110,7 @@ COMMANDS.logon = function(client, args) {
 
 COMMANDS.startGame = function(client, args){
 	var g = game.clientsToGames[client];
-	g.start();
+	g.start(args.mode);
 	COMMANDS.updateView(client, args);
 	if(g.gameIsStarted){
 		COMMANDS.hideStartButton(client, args);
