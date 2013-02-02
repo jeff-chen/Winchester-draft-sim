@@ -39,6 +39,7 @@ exports.initPile = function(size, mode) {
 	//the final thing returned is a list of names from the pool
 	var fs = require('fs');
 	var x = [];
+	mode = mode.toLowerCase();
 	console.log("the mode is");
 	console.log(mode);
 	if(typeof mode === 'undefined' || mode.toLowerCase() == 'cube' || mode.length == 0){
