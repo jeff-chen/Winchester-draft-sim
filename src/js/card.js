@@ -7,6 +7,7 @@ function WizardsAutoCard (cardname) {
   windowName = "WotCWindow";
   params = "toolbar=0, location=0, directories=0, status=0,menubar=0, scrollbars=0, resizable=0, width=450, height=400";
   win = window.open("http://www.wizards.com/magic/autocard.asp?name="+cardname, windowName, params);
+  //http://gatherer.wizards.com/Handlers/Image.ashx?size=small&type=card&name=Watery%20Grave&options=
 }
 
 function init() {
@@ -116,24 +117,11 @@ function remove_player(json) {
 
 COMMANDS.remove_player = remove_player;
 
-function create_card(json) {
-	var	p = PLAYERS[json.player],
-		c = $('<img>').attr('src', '/img/' + json.id + '.png').css({'width':72, 'height':96});
-
-	if(p) {
-		$(p).find('p').after(c);
-	} else {
-		p = $('<div>').attr('id', json.player).append($('<p>').text(json.player)).append(c).addClass('col');
-		PLAYERS[json.player] = p;
-		$('#main').append(p);
-	}
-
-}
-
 function update_all_piles(json){
 	//alert('fubat'); //like a zubat
 	for(var i=0;i<=3;i++){
 		pilename = '#pile' + i.toString();
+		$(pilename + ' > img').remove();
 		$(pilename + ' > label').remove();
 		for(var j=0; j < json.piles[i].length;j++){
 			$(pilename).append(cardize(json.piles[i][j]));
@@ -143,12 +131,14 @@ function update_all_piles(json){
 }
 
 function cardize(text){
-	return('<label><a href=\"#\" class=\"mtgcard\" onmouseover=>' + text + '</a><br/></label>');
+	return('<img src=\"http://gatherer.wizards.com/Handlers/Image.ashx?size=small&type=card&name=' + text + '&options=\">');
+	//return('<label><a href=\"#\" class=\"mtgcard\" onmouseover=>' + text + '</a><br/></label>');
 }
 
 function update_player_piles(json){
 	pilenametype = '#cardstaken';
-	$(pilenametype + ' > label').remove();
+	$(pilenametype + ' > img').remove();
+	$(pilenametype + ' > label').remove();	
 	for(var j in json.playerspile){
 		$(pilenametype).append(cardize(json.playerspile[j]));
 		//$(pilenametype).append('<label><a href=\"\" class=\"mtgcard\" target=\"_blank\">' + json.playerspile[j] + '</a><br/></label>');

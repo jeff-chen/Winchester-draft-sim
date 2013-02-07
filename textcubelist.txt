@@ -11,10 +11,11 @@ Wall of Omens
 Defiant Vanguard
 Porcelain Legionnaire
 Mirror Entity
-Lin-Sivvi, Defiant Hero
+Lin Sivvi, Defiant Hero
 Cloudchaser Kestrel
 Hero of Bladehold
 Reveillark
+Lingering Souls
 Cloudgoat Ranger
 Exalted Angel
 Eternal Dragon
@@ -54,7 +55,7 @@ Counterspell
 Impulse
 Exclude
 Repulse
-Capsize
+Cryptic Command
 Compulsive Research
 Deep Analysis
 Fact or Fiction
@@ -81,7 +82,6 @@ Bane of the Living
 Hypnotic Specter
 Silent Specter
 Vampire Nighthawk
-Phyrexian Rager
 Skinrender
 Shriekmaw
 Ink-Eyes, Servant of Oni
@@ -115,7 +115,7 @@ Countryside Crusher
 Keldon Vandals
 Skizzik
 Flametongue kavu
-Siege Gang Comamnder
+Siege-Gang Commander
 Voracious Dragon
 Inferno Titan
 Firebolt
@@ -138,14 +138,13 @@ Wild Nacatl
 Birds of Paradise
 Llanowar Elves
 Wolfbitten Captive
-Sakura Tribe Elder
+Sakura-Tribe Elder
 Scavenging Ooze
 Beastbreaker of Bala Ged
 Strangleroot Geist
 Fauna Shaman
 Vinelasher Kudzu
 Rofellos, Llanowar Emissary
-River Boa
 Uktabi Orangutan
 Wolfir Avenger
 Eternal Witness
@@ -169,16 +168,18 @@ Garruk Wildspeaker
 Primal Command
 Plow Under
 Duergar Hedge Mage
-Boggart Ram Gang
+Boggart Ram-Gang
 Kitchen Finks
-Augury Adept
+Detention Sphere
+Dryad Militant
+Rakdos Cackler
 Murderous Redcap
 Huntmaster of the Fells
-Lord of Extinction
+Lotleth Troll
 Oona, Queen of the Fae
 Simic Sky Swallower
-Fire/Ice
-Life/Death
+Fire // Ice
+Life // Death
 Goblin Trenches
 Vindicate
 Voidslime
@@ -186,8 +187,7 @@ Rare-B-Gone
 Prophetic Bolt
 Mirari's Wake
 Venser, the Sojourner
-Debtor's Knell
-Who/What/Where/When/Why
+Who/What/When/Where/Why
 Leaden Myr
 Silver Myr
 Copper Myr
@@ -211,7 +211,7 @@ Triskelavus
 Sensei's Divining Top
 Basilisk Collar
 Mana Vault
-Sol Ring
+Cursed Scroll
 Skullclamp
 Brittle Effigy
 Bonesplitter
@@ -225,13 +225,13 @@ Chimeric Idol
 Sword of Body and Mind
 Sword of Light and Shadow
 Sword of Feast and Famine
-Grafted Wargreaves
+Sword of War and Peace
+Grafted Wargear
 Oblivion Stone
 Erratic Portal
 Thran Dynamo
 Icy Manipulator
 Phyrexian Processor
-Power Matrix
 Bargaining Table
 Mind's Eye
 Gauntlet of Power
@@ -249,7 +249,7 @@ Breeding Pool
 Watery Grave
 Golgari Rot Farm
 Celestial Colonnade
-Creepy Tar Pit
+Creeping Tar Pit
 Lavaclaw Reaches
 Raging Ravine
 Stirring Wildwood

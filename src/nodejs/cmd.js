@@ -62,13 +62,13 @@ COMMANDS.logon = function(client, args) {
 				}
 				calljs(client, ['logon', {admin: (g.admin === p.name)}]);
 				callalljs(g.clients(), ['add_player', {name: args.name, admin: (g.admin === p.name)}]);
-				COMMANDS.updateCards(client);
+				COMMANDS.updateView(client,args);
 			} else {
 				calljs(client, ['notify', {message: 'Wrong game or user pass!'}]);
 			}
 		} else {
 			if(args.gamepass === g.pass) {
-				if(g.gameIsStarted){
+				if(g.gameIsStarted){ //check here that theres at least one player
 					calljs(client, ['notify', {message: 'That game is already started!'}]);
 				} else {
 				  p = new game.Player(args.name, args.namepass);
@@ -81,7 +81,7 @@ COMMANDS.logon = function(client, args) {
 				  g.playerPiles[args.name] = [];
 				  calljs(client, ['logon', {}]);
 				  callalljs(g.clients(), ['add_player', {name: args.name}]);
-				  COMMANDS.updateCards(client);
+				  COMMANDS.updateView(client,args);
 				}
 			} else {
 				calljs(client, ['notify', {message: 'Wrong game pass!'}]);
@@ -104,7 +104,7 @@ COMMANDS.logon = function(client, args) {
 		g.playerPiles[args.name] = [];
 		calljs(client, ['logon', {admin: true}]);
 		callalljs(g.clients(), ['add_player', {name: args.name, admin: true}]);
-		COMMANDS.updateCards(client);
+		COMMANDS.updateView(client,args);
 	}
 };
 

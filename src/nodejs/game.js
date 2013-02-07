@@ -9,7 +9,8 @@ exports.namesToPlayers = namesToPlayers;
 exports.clientsToGames = clientsToGames;
 
 
-
+//TODO: Wrap images around div with style="z-index: 0, 1, 2, etc.", position: absolute, margin-top: 0px, 30px, 60px, etc.
+//and mouseover/mouseoff events on the image to adjust the z-index.
 
 
 function Player(name, pass) {
