@@ -91,8 +91,9 @@ Game.prototype.assignPileToPlayer = function(pile_id, player){
 		this.setNextPlayer();
 		console.log(this.playerPiles);
 		console.log(this.piles);
-		console.log({player: pilescopy});
-		return({player: pilescopy}); //this is used to tell that update was a success so view can be updated
+		var takenAction = {player: player, piles: pilescopy};
+		console.log(takenAction);
+		return(takenAction); //this is used to tell that update was a success so view can be updated
 	} else {
 		console.log(player);
 		console.log(this.activePlayer);

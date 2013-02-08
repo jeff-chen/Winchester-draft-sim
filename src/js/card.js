@@ -14,7 +14,6 @@ function init() {
 	$('#main').hide();
 	$('#logonbutton').bind('click', ev_logon);
 	$('#draw').bind('click', ev_draw);
-	$('#reset').bind('click', ev_reset);
   $('#startgame').bind('click', ev_start);
 
   $('.takepile').bind('click', ev_takepile);  
@@ -27,11 +26,14 @@ function init() {
 function runCmd(json) {
 	//alert(json);
 	var func = COMMANDS[json[0]];
-
+  //alert(func);
 	if(func) {
 		func(json[1]);
 	} else {
-		COMMANDS.notify({message: 'Function ' + funcName + ' not found!'});
+		alert(json[0]);
+		alert(COMMANDS[json[0]]);
+		alert(json[1]);
+		COMMANDS.notify({message: 'Function ' + json + ' not found!'});
 	}
 }
 
@@ -42,12 +44,6 @@ function ev_draw(event) {
 function ev_takepile(event){
 	pileid = $(this)[0].id[4];
 	send_message(['takePile', {pileid:pileid}])
-	//alert(pileid);
-	//alert(parseInt(pileid));
-}
-
-function ev_reset(event) {
-	send_message(['reset', {}]);
 }
 
 function ev_start(event) {
@@ -90,7 +86,6 @@ function logon(json) {
 	$('#logon').hide();
 	$('#main').show();
 	if(!json.admin) {
-		$('#reset').hide();
 		$('#startgame').hide();
 		$('.adminonly').hide();
 	} else {
@@ -163,11 +158,6 @@ function update_player_piles(json){
 	}
 }
 
-function update_log(logtext){
-	$('#log > label').remove();
-	$('#log').append("<label>" + logtext + "</label>");
-}
-
 function update_active_player(json){
 	$('.takepile').show();
 	$('.notice').html(json.labeltext);
@@ -182,6 +172,7 @@ function hide_start_button(json){
 	$('input#startgame').remove();
 }
 
+
 COMMANDS.hide_start_button = hide_start_button;
 
 COMMANDS.update_active_player = update_active_player;
@@ -192,10 +183,14 @@ COMMANDS.update_player_piles = update_player_piles;
 
 COMMANDS.update_all_piles = update_all_piles;
 
-COMMANDS.create_card = create_card;
+COMMANDS.update_log = update_log;
 
-function reset(json) {
-	$('div.col > img').remove();
+function update_log(json){
+	var logtext = "";
+	logtext = logtext + "Player " + json["player"] + " took: ";
+	for(var j in json["piles"]){
+		logtext = logtext + json["piles"][j] + ", ";
+	}
+	$('#log > label').remove();
+	$('#log').append("<label>" + logtext + "</label>");
 }
-
-COMMANDS.reset = reset;

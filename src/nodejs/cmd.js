@@ -225,6 +225,12 @@ COMMANDS.takePile = function(client, args){
 	
 	pid = parseInt(args.pileid);
 	notes = g.assignPileToPlayer(pid, n);
-	//COMMANDS.updateLog(client, args);
-	COMMANDS.updateView(client, args);
+	if(notes != 0){
+		stuff = {player:notes['player'], piles:notes['piles']};
+		console.log(stuff);
+  	callalljs(g.clients(), ['update_log', {player:notes['player'], piles:notes['piles']}]);
+  	COMMANDS.updateView(client, args);
+  }else{
+	  console.log('hayo');
+  }
 }

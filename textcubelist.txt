@@ -247,7 +247,7 @@ Godless Shrine
 Steam Vents
 Breeding Pool
 Watery Grave
-Golgari Rot Farm
+Overgrown Tomb
 Celestial Colonnade
 Creeping Tar Pit
 Lavaclaw Reaches
@@ -257,7 +257,7 @@ Tranquil Thicket
 Secluded Steppe
 Lonely Sandbar
 Barren Moor
-Forgotten Cove
+Forgotten Cave
 Maze of Ith
 Treetop Village
 Faerie Conclave
