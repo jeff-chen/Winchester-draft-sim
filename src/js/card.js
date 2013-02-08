@@ -152,6 +152,7 @@ function update_player_piles(json){
 	pilenametype = '#cardstaken';
 	$(pilenametype + ' > img').remove();
 	$(pilenametype + ' > label').remove();	
+	$(pilenametype + ' > br').remove();
 	for(var j in json.playerspile){
 		$(pilenametype).append(cardize(json.playerspile[j]));
 		//$(pilenametype).append(cardize(json.playerspile[j],j));
