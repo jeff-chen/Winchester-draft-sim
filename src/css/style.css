@@ -21,11 +21,11 @@ div.ruler{
 div.container {
 	margin: 0 auto;
 	text-align: center;
-	width: 780px;
+	width: 1080px;
   }
 
 div.col {
   float: left;
-  width: 130px;
+  width: 250px;
   height: 100%;
 }

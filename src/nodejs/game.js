@@ -75,8 +75,10 @@ Game.prototype.clients = function() {
 	});
 };
 
+
 Game.prototype.assignPileToPlayer = function(pile_id, player){
 	nums = this.piles[pile_id].length;
+	pilescopy = this.piles[pile_id].slice(0);
 	//console.log(this.playerPiles);
 	//console.log(player);
 	//console.log('hithar');
@@ -89,7 +91,8 @@ Game.prototype.assignPileToPlayer = function(pile_id, player){
 		this.setNextPlayer();
 		console.log(this.playerPiles);
 		console.log(this.piles);
-		return(1); //this is used to tell that update was a success so view can be updated
+		console.log({player: pilescopy});
+		return({player: pilescopy}); //this is used to tell that update was a success so view can be updated
 	} else {
 		console.log(player);
 		console.log(this.activePlayer);

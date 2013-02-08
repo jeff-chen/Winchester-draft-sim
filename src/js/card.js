@@ -124,16 +124,29 @@ function update_all_piles(json){
 		$(pilename + ' > img').remove();
 		$(pilename + ' > label').remove();
 		for(var j=0; j < json.piles[i].length;j++){
+			//alert(j);
 			$(pilename).append(cardize(json.piles[i][j]));
+			//$(pilename).append(cardize(json.piles[i][j],j));
 			//$(pilename).append('<label>' + json.piles[i][j] + '<br/></label>');
 		}
 	}
 }
 
 function cardize(text){
-	return('<img src=\"http://gatherer.wizards.com/Handlers/Image.ashx?size=small&type=card&name=' + text + '&options=\">');
-	//return('<label><a href=\"#\" class=\"mtgcard\" onmouseover=>' + text + '</a><br/></label>');
+	stuff = '<img src=\"http://gatherer.wizards.com/Handlers/Image.ashx?size=small&type=card&name='
+	 + text 
+	 + '&options=\">'
+	return(stuff);
 }
+/*function cardize(text,offset){
+	//alert(offset);
+	stuff = '<img src=\"http://gatherer.wizards.com/Handlers/Image.ashx?size=small&type=card&name='
+	 + text 
+	 + '&options=\" style=\"position:absolute; top:' + (offset*40+60) + 'px; z-index:' + offset + '\">'
+	//alert(stuff);
+	return(stuff);
+	//return('<label><a href=\"#\" class=\"mtgcard\" onmouseover=>' + text + '</a><br/></label>');
+}*/
 
 function update_player_piles(json){
 	pilenametype = '#cardstaken';
@@ -141,8 +154,17 @@ function update_player_piles(json){
 	$(pilenametype + ' > label').remove();	
 	for(var j in json.playerspile){
 		$(pilenametype).append(cardize(json.playerspile[j]));
+		//$(pilenametype).append(cardize(json.playerspile[j],j));
 		//$(pilenametype).append('<label><a href=\"\" class=\"mtgcard\" target=\"_blank\">' + json.playerspile[j] + '</a><br/></label>');
 	}
+	for(var j in json.playerspile){
+		$(pilenametype).append('<br/><label>' + json.playerspile[j] + '</label>');
+	}
+}
+
+function update_log(logtext){
+	$('#log > label').remove();
+	$('#log').append("<label>" + logtext + "</label>");
 }
 
 function update_active_player(json){

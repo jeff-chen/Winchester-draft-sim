@@ -74,7 +74,7 @@ Putrid Imp
 Mesmeric Fiend
 Withered Wretch
 Bloodghast
-Nezumi Shortfang
+Pack Rat
 Oona's Prowler
 Skinthinner
 Zombie Cutthroat
@@ -167,7 +167,7 @@ Harmonize
 Garruk Wildspeaker
 Primal Command
 Plow Under
-Duergar Hedge Mage
+Duergar Hedge-Mage
 Boggart Ram-Gang
 Kitchen Finks
 Detention Sphere

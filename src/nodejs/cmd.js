@@ -68,7 +68,7 @@ COMMANDS.logon = function(client, args) {
 			}
 		} else {
 			if(args.gamepass === g.pass) {
-				if(g.gameIsStarted){ //check here that theres at least one player
+				if(g.gameIsStarted){ //TODO: check here that theres at least one player
 					calljs(client, ['notify', {message: 'That game is already started!'}]);
 				} else {
 				  p = new game.Player(args.name, args.namepass);
@@ -208,32 +208,6 @@ COMMANDS.drawPile = function(client, args){
 		pid = args.id;
 }
 
-/*COMMANDS.draw = function(client, args) {
-	var	g = game.clientsToGames[client],
-		p = g.clientsToPlayers[client],
-		//abc = g.pile.pop(),
-		
-		c = g.deck.pop(),
-		n = args.name || p.name;
-
-  g.addToPiles();
-  sys.log(sys.inspect(g.piles));
-	sys.log(sys.inspect(g.namesToCards));
-	sys.log(sys.inspect(abc));
-	//sys.log(sys.inspect(p));
-  //sys.log(sys.inspect(g.pile));
-	if(!c) {
-		if(g.deck.length > 0) {
-			COMMANDS.draw(client, args);
-		}
-	} else {
-		sys.log('Card: ' + c);
-		g.namesToCards[n].push(c);
-		//g.playerPiles[n].push(abc);
-		//sys.log(sys.inspect(g.playerPiles));
-		callalljs(g.clients(), ['create_card', {player: n, id: c}]);
-	}
-};*/
 
 COMMANDS.reset = function(client, args) {
 	var	g = game.clientsToGames[client];
@@ -250,6 +224,7 @@ COMMANDS.takePile = function(client, args){
 	activeplayer = g.activePlayer;
 	
 	pid = parseInt(args.pileid);
-	g.assignPileToPlayer(pid, n);
+	notes = g.assignPileToPlayer(pid, n);
+	//COMMANDS.updateLog(client, args);
 	COMMANDS.updateView(client, args);
 }
