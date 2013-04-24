@@ -34,6 +34,47 @@ shuffle = function(o){ //v1.0
     return o;
 };
 
+genpack = function(set){
+	var fs = require('fs');
+	var pack = [];
+	
+	var commons = fs.readFileSync(set + 'commons.txt').toString().split("\n");
+  var y = getRandom(commons, 10);
+  pack.push(y);
+
+	var uncommons = fs.readFileSync(set + 'uncommons.txt').toString().split("\n");
+  var y = getRandom(uncommons, 3);
+  pack.push(y);
+
+  var rarelist = fs.readFileSync(set + 'rares.txt').toString().split("\n");
+  var rarelist2 = fs.readFileSync(set + 'rares.txt').toString().split("\n");
+  var mythiclist = fs.readFileSync(set + 'mythics.txt').toString().split("\n");
+  rarelist.push(rarelist2);
+  rarelist.push(mythiclist);
+  rarelist = flatten(rarelist);
+
+  var y = getRandom(rarelist, 1);
+  pack.push(y);
+
+	//make an exception for dragon's maze
+	if(set == 'dgm'){
+		console.log('insering land');
+		var landlist = fs.readFileSync(set + 'lands.txt').toString().split("\n");
+		var y = getRandom(landlist, 1);
+		pack.push(y);
+		console.log(pack);
+	}
+	pack = flatten(pack);
+	return(pack);
+}
+
+draftformats = 
+  {"rtr":["rtr","rtr","rtr","rtr","rtr","rtr"],
+   "gtc":["gtc","gtc","gtc","gtc","gtc","gtc"],
+   "dgm":["rtr","rtr","gtc","gtc","dgm","dgm"],
+   "lrw":["lrw","lrw","lrw","mor","mor","mor"]
+}
+
 
 exports.initPile = function(size, mode) {
 	//the final thing returned is a list of names from the pool
@@ -47,24 +88,11 @@ exports.initPile = function(size, mode) {
 	  var x = getRandom(cubecards, size);
   } else {
   // RTR
-    for(i=0;i<6;i++){
-	    var commons = fs.readFileSync(mode + 'commons.txt').toString().split("\n");
-	    var y = getRandom(commons, 10);
-	    x.push(y);
-	  
-	  	var uncommons = fs.readFileSync(mode + 'uncommons.txt').toString().split("\n");
-	    var y = getRandom(uncommons, 3);
-	    x.push(y);
-	  
-	    var rarelist = fs.readFileSync(mode + 'rares.txt').toString().split("\n");
-	    var rarelist2 = fs.readFileSync(mode + 'rares.txt').toString().split("\n");
-	    var mythiclist = fs.readFileSync(mode + 'mythics.txt').toString().split("\n");
-	    rarelist.push(rarelist2);
-	    rarelist.push(mythiclist);
-	    rarelist = flatten(rarelist);
-
-	    var y = getRandom(rarelist, 1);
-	    x.push(y);
+    /*for(i=0;i<6;i++){
+      x.push(genpack(mode));
+    }*/
+    for(i in draftformats[mode]){
+	    x.push(genpack(draftformats[mode][i]));
     }
   }
   x = flatten(x);
