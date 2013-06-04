@@ -48,6 +48,7 @@ Quicksilver Dragon
 Venser, Shaper Savant
 Phyrexian Metamorph
 Mulldrifter
+Aetherling
 Mystical Tutor
 Ponder
 Mana Leak
@@ -64,15 +65,13 @@ Jace, the Mind Sculptor
 Control Magic
 Dismiss
 Time Warp
-Future Sight
 Jace's Ingenuity
 Commandeer
-Take Possession
+Vedalken Shackles
 Gravecrawler
-Diregraf Ghoul
 Putrid Imp
 Mesmeric Fiend
-Withered Wretch
+Blood Scrivener
 Bloodghast
 Pack Rat
 Oona's Prowler
@@ -81,6 +80,9 @@ Zombie Cutthroat
 Bane of the Living
 Hypnotic Specter
 Silent Specter
+Phyrexian Rager
+Nyxathid
+Mercenary Knight
 Vampire Nighthawk
 Skinrender
 Shriekmaw
@@ -90,13 +92,15 @@ Booster Tutor
 Hymn to Tourach
 Terror
 Exhume
+Go for the Throat
+Smother
 Demonic Tutor
 Recurring Nightmare
 Necromancy
 Liliana of the Veil
 Phyrexian Arena
 Dismember
-Stupor
+Damnation
 Fugue
 Living Death
 Spikeshot Elder
@@ -113,7 +117,7 @@ Goblin Chieftain
 Taurean Mauler
 Countryside Crusher
 Keldon Vandals
-Skizzik
+Hellrider
 Flametongue kavu
 Siege-Gang Commander
 Voracious Dragon
@@ -165,7 +169,7 @@ Survival of the Fittest
 Kodama's Reach
 Harmonize
 Garruk Wildspeaker
-Primal Command
+Natural Order
 Plow Under
 Duergar Hedge-Mage
 Boggart Ram-Gang
@@ -183,10 +187,10 @@ Life // Death
 Goblin Trenches
 Vindicate
 Voidslime
-Rare-B-Gone
-Prophetic Bolt
-Mirari's Wake
-Venser, the Sojourner
+Dreadbore
+Ral Zarek
+Voice of Resurgence
+Lavinia of the Tenth
 Who/What/When/Where/Why
 Leaden Myr
 Silver Myr
@@ -205,7 +209,6 @@ Su-chi
 Masticore
 Precursor Golem
 Karn, Silver Golem
-Duplicant
 Wurmcoil Engine
 Triskelavus
 Sensei's Divining Top
@@ -213,10 +216,8 @@ Basilisk Collar
 Mana Vault
 Cursed Scroll
 Skullclamp
-Brittle Effigy
 Bonesplitter
 Shrine of Loyal Legions
-Lightning Greaves
 Ratchet Bomb
 Shrine of Burning Rage
 Crystal Ball
@@ -234,13 +235,23 @@ Icy Manipulator
 Phyrexian Processor
 Bargaining Table
 Mind's Eye
-Gauntlet of Power
+Chromatic Lantern
 Batterskull
 Obelisk of Alara
 Mindslaver
+Tundra
+Scrubland
+Underground Sea
+Volcanic Island
 Badlands
-Plateau
+Bayou
 Taiga
+Plateau
+Savannah
+Tropical Island
+Blood Crypt
+Sacred Foundry
+Stomping Ground
 Temple Garden
 Hallowed Fountain
 Godless Shrine
@@ -252,14 +263,7 @@ Celestial Colonnade
 Creeping Tar Pit
 Lavaclaw Reaches
 Raging Ravine
-Stirring Wildwood
-Tranquil Thicket
-Secluded Steppe
-Lonely Sandbar
-Barren Moor
-Forgotten Cave
+Windswept Heath
 Maze of Ith
-Treetop Village
-Faerie Conclave
 Volrath's Stronghold
 City of Ass
