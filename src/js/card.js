@@ -69,7 +69,7 @@ function send_message(msg) {
 }
 
 function ev_logon(event) {
-	var	server = $('#server').val(),
+	var	server = $('#server').val().trim(),
 		port = parseInt($('#port').val());
 
 	socket = io.connect('http://' + server + ':' + port) //, {rememberTransport: false, port: port});
