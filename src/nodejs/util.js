@@ -73,7 +73,8 @@ draftformats =
    "gtc":["gtc","gtc","gtc","gtc","gtc","gtc"],
    "dgm":["rtr","rtr","gtc","gtc","dgm","dgm"],
    "lrw":["lrw","lrw","lrw","mor","mor","mor"],
-   "mma":["mma","mma","mma","mma","mma","mma"]
+   "mma":["mma","mma","mma","mma","mma","mma"],
+   "ths":["ths","ths","ths","ths","ths","ths"]
 }
 
 

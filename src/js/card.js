@@ -10,6 +10,7 @@ function WizardsAutoCard (cardname) {
   //http://gatherer.wizards.com/Handlers/Image.ashx?size=small&type=card&name=Watery%20Grave&options=
 }
 
+
 function init() {
 	$('#main').hide();
 	$('#logonbutton').bind('click', ev_logon);
