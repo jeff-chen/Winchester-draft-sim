@@ -1,269 +1,270 @@
-Isamaru, Hound of Konda
-Elite Vanguard
 Children of Korlis
+Elite Vanguard
+Isamaru, Hound of Konda
 Student of Warfare
-Thalia, Guardian of Thraben
-Whipcorder
-Stoneforge Mystic
-Mistral Charger
 Blade of the Sixth Pride
+Mistral Charger
+Stoneforge Mystic
+Thalia, Guardian of Thraben
 Wall of Omens
+Whipcorder
+Blade Splicer
 Defiant Vanguard
-Porcelain Legionnaire
-Mirror Entity
 Lin Sivvi, Defiant Hero
-Cloudchaser Kestrel
+Mirror Entity
 Hero of Bladehold
-Reveillark
-Lingering Souls
 Cloudgoat Ranger
 Exalted Angel
 Eternal Dragon
 Swords to Plowshares
 Disenchant
+Bound in Silence
+Glorious Anthem
+Lingering Souls
 Mobilization
 Oblivion Ring
-Glorious Anthem
-Bound in Silence
-Elspeth, Knight-Errant
-Faith's Fetters
+Porcelain Legionnaire
+Reveillark
 Ajani Goldmane
 Armageddon
 Day of Judgment
+Elspeth, Knight-Errant
+Faith's Fetters
 Gideon Jura
 Akroma's Vengeance
 Decree of Justice
-Spined Thopter
 Fathom Seer
-Mischievous Quanar
-Chromeshell Crab
-Vendilion Clique
-Vesuvan Shapeshifter
-Brine Elemental
-Willbender
 Voidmage Apprentice
-Shaper Parasite
+Willbender
 Riptide Survivor
-Quicksilver Dragon
-Venser, Shaper Savant
+Shaper Parasite
+Spined Thopter
+Vendilion Clique
 Phyrexian Metamorph
+Venser, Shaper Savant
+Chromeshell Crab
+Mischievous Quanar
 Mulldrifter
+Vesuvan Shapeshifter
 Aetherling
+Brine Elemental
+Quicksilver Dragon
 Mystical Tutor
 Ponder
-Mana Leak
+Preordain
 Counterspell
 Impulse
+Mana Leak
+Compulsive Research
 Exclude
 Repulse
-Cryptic Command
-Compulsive Research
-Deep Analysis
-Fact or Fiction
-Gifts Ungiven
-Jace, the Mind Sculptor
+Tinker
 Control Magic
+Cryptic Command
+Deep Analysis
 Dismiss
+Fact or Fiction
+Jace, the Mind Sculptor
 Time Warp
-Jace's Ingenuity
 Commandeer
-Vedalken Shackles
 Gravecrawler
 Putrid Imp
-Mesmeric Fiend
 Blood Scrivener
 Bloodghast
-Pack Rat
+Mesmeric Fiend
 Oona's Prowler
+Pack Rat
 Skinthinner
-Zombie Cutthroat
-Bane of the Living
 Hypnotic Specter
-Silent Specter
-Phyrexian Rager
-Nyxathid
 Mercenary Knight
+Nyxathid
+Phyrexian Rager
 Vampire Nighthawk
+Bane of the Living
 Skinrender
 Shriekmaw
+Zombie Cutthroat
 Ink-Eyes, Servant of Oni
+Silent Specter
 Avatar of Woe
 Booster Tutor
-Hymn to Tourach
-Terror
+Demonic Tutor
 Exhume
 Go for the Throat
+Hymn to Tourach
 Smother
-Demonic Tutor
-Recurring Nightmare
-Necromancy
-Liliana of the Veil
-Phyrexian Arena
+Terror
 Dismember
+Liliana of the Veil
+Necromancy
+Phyrexian Arena
+Recurring Nightmare
 Damnation
 Fugue
 Living Death
-Spikeshot Elder
-Stromkirk Noble
-Jackal Pup
 Goblin Guide
 Grim Lavamancer
+Jackal Pup
+Spikeshot Elder
+Stromkirk Noble
 Ember Hauler
+Frazzled Editor
 Goblin Wardriver
 Mogg War Marshal
-Frazzled Editor
 Sparksmith
-Goblin Chieftain
-Taurean Mauler
 Countryside Crusher
+Goblin Chieftain
 Keldon Vandals
+Taurean Mauler
+Flametongue Kavu
 Hellrider
-Flametongue kavu
 Siege-Gang Commander
 Voracious Dragon
 Inferno Titan
 Firebolt
 Lightning Bolt
-Shattering Pulse
-Magma Jet
 Incinerate
-Sulfuric Vortex
-Slagstorm
-Threaten
-Wheel of Fortune
+Magma Jet
+Shattering Pulse
 Blast from the Past
 Flame Javelin
+Slagstorm
+Sulfuric Vortex
+Threaten
+Wheel of Fortune
 Demolish
 Wild Ricochet
-Form of the Dragon
 Demonfire
-Joraga Treespeaker
-Wild Nacatl
+Form of the Dragon
 Birds of Paradise
+Experiment One
+Joraga Treespeaker
 Llanowar Elves
+Wild Nacatl
 Wolfbitten Captive
+Beastbreaker of Bala Ged
+Fauna Shaman
+Rofellos, Llanowar Emissary
 Sakura-Tribe Elder
 Scavenging Ooze
-Beastbreaker of Bala Ged
 Strangleroot Geist
-Fauna Shaman
-Vinelasher Kudzu
-Rofellos, Llanowar Emissary
-Uktabi Orangutan
-Wolfir Avenger
 Eternal Witness
 Troll Ascetic
+Uktabi Orangutan
+Blastoderm
 Chameleon Colossus
 Obstinate Baloth
-Blastoderm
-Cockatrice
+Polukranos, World Eater
 Acidic Slime
+Cockatrice
 Thragtusk
 Penumbra Wurm
 Verdant Force
 Rancor
-Sylvan Library
 Naturalize
 Regrowth
 Survival of the Fittest
+Sylvan Library
 Kodama's Reach
-Harmonize
 Garruk Wildspeaker
+Harmonize
 Natural Order
 Plow Under
-Duergar Hedge-Mage
-Boggart Ram-Gang
-Kitchen Finks
 Detention Sphere
-Dryad Militant
-Rakdos Cackler
-Murderous Redcap
-Huntmaster of the Fells
-Lotleth Troll
+Lavinia of the Tenth
+Baleful Strix
 Oona, Queen of the Fae
+Rakdos Cackler
+Dreadbore
+Murderous Redcap
+Boggart Ram-Gang
+Huntmaster of the Fells
+Dryad Militant
+Voice of Resurgence
+Kitchen Finks
+Vindicate
+Life // Death
+Lotleth Troll
+Shardless Agent
 Simic Sky Swallower
 Fire // Ice
-Life // Death
-Goblin Trenches
-Vindicate
-Voidslime
-Dreadbore
 Ral Zarek
-Voice of Resurgence
-Lavinia of the Tenth
-Who/What/When/Where/Why
-Leaden Myr
-Silver Myr
-Copper Myr
-Iron Myr
-Gold Myr
-Steel Overseer
-Immolating Souleater
-Bottle Gnomes
-Palladium Myr
-Scuttlemutt
-Juggernaut
-Lodestone Golem
-Solemn Simulacrum
-Su-chi
-Masticore
-Precursor Golem
-Karn, Silver Golem
-Wurmcoil Engine
-Triskelavus
-Sensei's Divining Top
+Figure of Destiny
+Goblin Trenches
+Who // What // When // Where // Why
 Basilisk Collar
-Mana Vault
-Cursed Scroll
-Skullclamp
 Bonesplitter
-Shrine of Loyal Legions
+Cursed Scroll
+Mana Vault
+Sensei's Divining Top
+Skullclamp
+Copper Myr
+Gold Myr
+Immolating Souleater
+Iron Myr
+Leaden Myr
 Ratchet Bomb
 Shrine of Burning Rage
+Shrine of Loyal Legions
+Silver Myr
+Steel Overseer
+Bottle Gnomes
+Chimeric Idol
+Chromatic Lantern
 Crystal Ball
 Crystal Shard
-Chimeric Idol
-Sword of Body and Mind
-Sword of Light and Shadow
-Sword of Feast and Famine
-Sword of War and Peace
 Grafted Wargear
 Oblivion Stone
+Palladium Myr
+Scuttlemutt
+Sword of Body and Mind
+Sword of Feast and Famine
+Sword of Light and Shadow
+Sword of War and Peace
+Vedalken Shackles
 Erratic Portal
-Thran Dynamo
 Icy Manipulator
+Juggernaut
+Lodestone Golem
+Masticore
 Phyrexian Processor
+Solemn Simulacrum
+Su-Chi
+Thran Dynamo
 Bargaining Table
-Mind's Eye
-Chromatic Lantern
 Batterskull
-Obelisk of Alara
+Karn, Silver Golem
+Mind's Eye
+Precursor Golem
 Mindslaver
-Tundra
-Scrubland
-Underground Sea
-Volcanic Island
+Obelisk of Alara
+Wurmcoil Engine
+Myr Battlesphere
 Badlands
 Bayou
-Taiga
-Plateau
-Savannah
-Tropical Island
 Blood Crypt
-Sacred Foundry
-Stomping Ground
-Temple Garden
-Hallowed Fountain
-Godless Shrine
-Steam Vents
 Breeding Pool
-Watery Grave
-Overgrown Tomb
 Celestial Colonnade
-Creeping Tar Pit
-Lavaclaw Reaches
-Raging Ravine
-Windswept Heath
-Maze of Ith
-Volrath's Stronghold
 City of Ass
+Creeping Tar Pit
+Godless Shrine
+Hallowed Fountain
+Lavaclaw Reaches
+Maze of Ith
+Overgrown Tomb
+Plateau
+Raging Ravine
+Sacred Foundry
+Savannah
+Scrubland
+Steam Vents
+Stomping Ground
+Taiga
+Temple Garden
+Tropical Island
+Tundra
+Underground Sea
+Volcanic Island
+Volrath's Stronghold
+Watery Grave
+Windswept Heath
