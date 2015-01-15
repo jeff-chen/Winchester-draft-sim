@@ -39,10 +39,14 @@
 <div class="ruler"></div>
 	<form method="get" action="">
 		<div class='adminonly'>
-		<input type="radio" name='draftformat' value='MMA' id='MMA'>Modern Masters
-		<input type="radio" name='draftformat' value='DGM' id='DGM'>DGM+GTC+RTR boosters
-		<input type="radio" name='draftformat' value='THS' id='THS'>Theros
-		<input type="radio" name='draftformat' value='Cube' id='Cube'>Cube
+		<select id='draftformat' name='draftformat'>
+		  <option value='CUBE' id='Cube' value='Cube'>Cube</option>
+		  <option value='DGM' id='DGM' value='DGM'>Dragon's Maze</option>
+		  <option value='THS' id='THS' value='THS'>Theros</option>
+		  <option value='KTK' id='KTK' value='KTK'>Khans of Tarkir</option>
+		  <option value='MMA' id='MMA' value='MMA'>Modern Masters</option>
+		  <option value='SCG' id='SCG' value='SCG'>Scourge</option>
+		</select>
 		<input type="button" id='startgame' value="Start Game"/>
 		</div>
 	</form>

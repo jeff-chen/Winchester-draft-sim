@@ -74,7 +74,11 @@ draftformats =
    "dgm":["rtr","rtr","gtc","gtc","dgm","dgm"],
    "lrw":["lrw","lrw","lrw","mor","mor","mor"],
    "mma":["mma","mma","mma","mma","mma","mma"],
-   "ths":["ths","ths","ths","ths","ths","ths"]
+   "ths":["ths","ths","ths","ths","ths","ths"],
+   "btg":["ths","ths","ths","btg","btg","btg"],
+   "ktk":["ktk","ktk","ktk","ktk","ktk","ktk"],
+   "m15":["m15","m15","m15","m15","m15","m15"],
+   "scg":["scg","scg","scg","scg","scg","scg"]
 }
 
 

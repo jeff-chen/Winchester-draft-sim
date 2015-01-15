@@ -6,7 +6,7 @@ var PLAYERS = {};
 function WizardsAutoCard (cardname) { 
   windowName = "WotCWindow";
   params = "toolbar=0, location=0, directories=0, status=0,menubar=0, scrollbars=0, resizable=0, width=450, height=400";
-  win = window.open("http://www.wizards.com/magic/autocard.asp?name="+cardname, windowName, params);
+  win = window.open("http://mtgimage.com/card/"+cardname);//, windowName, params);
   //http://gatherer.wizards.com/Handlers/Image.ashx?size=small&type=card&name=Watery%20Grave&options=
 }
 
@@ -49,7 +49,7 @@ function ev_takepile(event){
 
 function ev_start(event) {
 	//alert('hallo');
-	game_mode = $('input[name=draftformat]:checked').val();
+	game_mode = $('#draftformat').val();
 	send_message(['startGame', {mode:game_mode}]);
 	//if($('input#Cube').attr('checked')){
 	//	send_message(['startGame', {mode:'cube'}]);
@@ -129,9 +129,9 @@ function update_all_piles(json){
 }
 
 function cardize(text){
-	stuff = '<img src=\"http://gatherer.wizards.com/Handlers/Image.ashx?size=small&type=card&name='
-	 + text 
-	 + '&options=\">'
+	stuff = '<img src=\"http://mtgimage.com/card/'
+	 + text
+	 + '.jpg\" class=\"mtgcard\"">'
 	return(stuff);
 }
 /*function cardize(text,offset){

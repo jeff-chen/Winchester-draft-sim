@@ -1,6 +1,7 @@
 Children of Korlis
 Elite Vanguard
 Isamaru, Hound of Konda
+Soldier of the Pantheon
 Student of Warfare
 Blade of the Sixth Pride
 Mistral Charger
@@ -9,38 +10,38 @@ Thalia, Guardian of Thraben
 Wall of Omens
 Whipcorder
 Blade Splicer
+Brimaz, King of Oreskos
 Defiant Vanguard
 Lin Sivvi, Defiant Hero
 Mirror Entity
 Hero of Bladehold
 Cloudgoat Ranger
+Reveillark
 Exalted Angel
-Eternal Dragon
+Ajani Goldmane
+Elspeth, Knight-Errant
+Gideon Jura
+Porcelain Legionnaire
 Swords to Plowshares
 Disenchant
-Bound in Silence
-Glorious Anthem
+Unexpectedly Absent
+Council's Judgment
 Lingering Souls
-Mobilization
-Oblivion Ring
-Porcelain Legionnaire
-Reveillark
-Ajani Goldmane
 Armageddon
 Day of Judgment
-Elspeth, Knight-Errant
-Faith's Fetters
-Gideon Jura
 Akroma's Vengeance
-Decree of Justice
+Bound in Silence
+Mobilization
+Oblivion Ring
+Faith's Fetters
+Spear of Heliod
 Fathom Seer
-Voidmage Apprentice
+Omenspeaker
 Willbender
 Riptide Survivor
 Shaper Parasite
-Spined Thopter
 Vendilion Clique
-Phyrexian Metamorph
+Kheru Spellsnatcher
 Venser, Shaper Savant
 Chromeshell Crab
 Mischievous Quanar
@@ -49,36 +50,38 @@ Vesuvan Shapeshifter
 Aetherling
 Brine Elemental
 Quicksilver Dragon
+Jace, the Mind Sculptor
+Phyrexian Metamorph
+Vedalken Shackles
 Mystical Tutor
-Ponder
-Preordain
 Counterspell
 Impulse
 Mana Leak
-Compulsive Research
 Exclude
 Repulse
-Tinker
-Control Magic
+Thirst for Knowledge
 Cryptic Command
-Deep Analysis
-Dismiss
 Fact or Fiction
-Jace, the Mind Sculptor
+Dig Through Time
+Ponder
+Preordain
+Compulsive Research
+Tinker
+Deep Analysis
 Time Warp
-Commandeer
+Control Magic
+Bloodsoaked Champion
 Gravecrawler
 Putrid Imp
 Blood Scrivener
 Bloodghast
-Mesmeric Fiend
 Oona's Prowler
 Pack Rat
 Skinthinner
+Flesh Carver
 Hypnotic Specter
-Mercenary Knight
 Nyxathid
-Phyrexian Rager
+Ophiomancer
 Vampire Nighthawk
 Bane of the Living
 Skinrender
@@ -87,55 +90,58 @@ Zombie Cutthroat
 Ink-Eyes, Servant of Oni
 Silent Specter
 Avatar of Woe
-Booster Tutor
+Liliana of the Veil
+Ob Nixilis of the Black Oath
+Go for the Throat
+Smother
+Dismember
+Hero's Downfall
+Life Death
+Thoughtseize
 Demonic Tutor
 Exhume
-Go for the Throat
 Hymn to Tourach
-Smother
-Terror
-Dismember
-Liliana of the Veil
+Toxic Deluge
+Damnation
+Living Death
 Necromancy
 Phyrexian Arena
 Recurring Nightmare
-Damnation
-Fugue
-Living Death
+Firedrinker Satyr
 Goblin Guide
 Grim Lavamancer
 Jackal Pup
 Spikeshot Elder
 Stromkirk Noble
 Ember Hauler
-Frazzled Editor
 Goblin Wardriver
+Gore-House Chainwalker
 Mogg War Marshal
 Sparksmith
-Countryside Crusher
 Goblin Chieftain
 Keldon Vandals
 Taurean Mauler
 Flametongue Kavu
 Hellrider
+Krenko, Mob Boss
 Siege-Gang Commander
-Voracious Dragon
 Inferno Titan
-Firebolt
+Sarkhan, the Dragonspeaker
 Lightning Bolt
 Incinerate
+Lightning Strike
 Magma Jet
 Shattering Pulse
 Blast from the Past
-Flame Javelin
+Stoke the Flames
+Firebolt
 Slagstorm
-Sulfuric Vortex
 Threaten
 Wheel of Fortune
-Demolish
-Wild Ricochet
 Demonfire
+Sulfuric Vortex
 Form of the Dragon
+Purphoros, God of the Forge
 Birds of Paradise
 Experiment One
 Joraga Treespeaker
@@ -148,7 +154,9 @@ Rofellos, Llanowar Emissary
 Sakura-Tribe Elder
 Scavenging Ooze
 Strangleroot Geist
+Sylvan Caryatid
 Eternal Witness
+Reclamation Sage
 Troll Ascetic
 Uktabi Orangutan
 Blastoderm
@@ -156,90 +164,92 @@ Chameleon Colossus
 Obstinate Baloth
 Polukranos, World Eater
 Acidic Slime
-Cockatrice
 Thragtusk
 Penumbra Wurm
 Verdant Force
-Rancor
+Garruk Wildspeaker
 Naturalize
 Regrowth
-Survival of the Fittest
-Sylvan Library
 Kodama's Reach
-Garruk Wildspeaker
 Harmonize
 Natural Order
 Plow Under
-Detention Sphere
+Rancor
+Survival of the Fittest
+Sylvan Library
+Courser of Kruphix
 Lavinia of the Tenth
-Baleful Strix
+Detention Sphere
 Oona, Queen of the Fae
+Baleful Strix
 Rakdos Cackler
-Dreadbore
+Tymaret, the Murder King
 Murderous Redcap
+Dreadbore
 Boggart Ram-Gang
 Huntmaster of the Fells
 Dryad Militant
 Voice of Resurgence
 Kitchen Finks
 Vindicate
-Life // Death
 Lotleth Troll
-Shardless Agent
 Simic Sky Swallower
-Fire // Ice
+Shardless Agent
 Ral Zarek
+Fire Ice
 Figure of Destiny
 Goblin Trenches
-Who // What // When // Where // Why
+Copper Myr
+Gold Myr
+Immolating Souleater
+Iron Myr
+Leaden Myr
+Lore Seeker
+Silver Myr
+Steel Overseer
+Bottle Gnomes
+Palladium Myr
+Scuttlemutt
+Cogwork Librarian
+Lodestone Golem
+Masticore
+Solemn Simulacrum
+Su-Chi
+Karn, Silver Golem
+Precursor Golem
+Duplicant
+Wurmcoil Engine
+Myr Battlesphere
 Basilisk Collar
 Bonesplitter
 Cursed Scroll
 Mana Vault
 Sensei's Divining Top
 Skullclamp
-Copper Myr
-Gold Myr
-Immolating Souleater
-Iron Myr
-Leaden Myr
+Grim Monolith
 Ratchet Bomb
 Shrine of Burning Rage
 Shrine of Loyal Legions
-Silver Myr
-Steel Overseer
-Bottle Gnomes
 Chimeric Idol
 Chromatic Lantern
 Crystal Ball
 Crystal Shard
 Grafted Wargear
+Hall of Triumph
 Oblivion Stone
-Palladium Myr
-Scuttlemutt
 Sword of Body and Mind
 Sword of Feast and Famine
+Sword of Fire and Ice
 Sword of Light and Shadow
 Sword of War and Peace
-Vedalken Shackles
 Erratic Portal
 Icy Manipulator
-Juggernaut
-Lodestone Golem
-Masticore
 Phyrexian Processor
-Solemn Simulacrum
-Su-Chi
 Thran Dynamo
-Bargaining Table
 Batterskull
-Karn, Silver Golem
 Mind's Eye
-Precursor Golem
 Mindslaver
 Obelisk of Alara
-Wurmcoil Engine
-Myr Battlesphere
 Badlands
 Bayou
 Blood Crypt
@@ -247,6 +257,7 @@ Breeding Pool
 Celestial Colonnade
 City of Ass
 Creeping Tar Pit
+Evolving Wilds
 Godless Shrine
 Hallowed Fountain
 Lavaclaw Reaches
@@ -268,3 +279,5 @@ Volcanic Island
 Volrath's Stronghold
 Watery Grave
 Windswept Heath
+Sentinel Dispatch
+Worldknit
