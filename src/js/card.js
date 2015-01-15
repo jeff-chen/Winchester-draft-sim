@@ -16,7 +16,7 @@ function init() {
 	$('#logonbutton').bind('click', ev_logon);
 	$('#draw').bind('click', ev_draw);
   $('#startgame').bind('click', ev_start);
-
+  $('#startsealed').bind('click', ev_start_sealed);
   $('.takepile').bind('click', ev_takepile);  
 
 	$(window).unload(function() {
@@ -48,14 +48,13 @@ function ev_takepile(event){
 }
 
 function ev_start(event) {
-	//alert('hallo');
 	game_mode = $('#draftformat').val();
 	send_message(['startGame', {mode:game_mode}]);
-	//if($('input#Cube').attr('checked')){
-	//	send_message(['startGame', {mode:'cube'}]);
-	//} else {
-	//	send_message(['startGame', {mode:'rtr'}])
-	//}
+}
+
+function ev_start_sealed(event) {
+	game_mode = $('#draftformat').val();
+	send_message(['startGameSealed', {mode:game_mode}]);
 }
 
 function notify(json) {
@@ -155,7 +154,7 @@ function update_player_piles(json){
 		//$(pilenametype).append('<label><a href=\"\" class=\"mtgcard\" target=\"_blank\">' + json.playerspile[j] + '</a><br/></label>');
 	}
 	for(var j in json.playerspile){
-		$(pilenametype).append('<br/><label>' + json.playerspile[j] + '</label>');
+		$(pilenametype).append('<br/><label>1 ' + json.playerspile[j] + '</label>');
 	}
 }
 
@@ -171,6 +170,7 @@ function update_inactive_player(json){
 
 function hide_start_button(json){
 	$('input#startgame').remove();
+	$('input#startsealed').remove();
 }
 
 

@@ -61,12 +61,28 @@ Game.prototype.start = function(mode){
 	//if(!this.gameIsStarted){
 	//todo: check there are exactly two players before starting, though gameIsStarted should handle that already
   	this.gameIsStarted = 1;
-  	this.pile = loadPile(mode);
+  	this.pile = loadPile(mode,90);
     this.addToPiles();
     this.activePlayer = Object.keys(this.playerPiles)[Math.floor(Math.random()*Object.keys(this.playerPiles).length)]; //first player.name
 	  //also view should be rendered here along with appropriate js binding events rather than on index.html.
   }
 } 
+
+Game.prototype.startSealed = function(mode){
+		console.log('starting');
+		console.log(this.playerPiles);
+		if(!this.gameIsStarted && Object.keys(this.playerPiles).length > 1){
+	  	this.gameIsStarted = 1;
+	  	this.pile = loadPile(mode,180); //90 per player.
+	    console.log('omghai');
+	    console.log(this.pile.length);
+	    this.assignSealedToPlayers();
+	    //this.addToPiles();
+	    //this.activePlayer = Object.keys(this.playerPiles)[Math.floor(Math.random()*Object.keys(this.playerPiles).length)]; 
+		  //also view should be rendered here along with appropriate js binding events rather than on index.html.
+		  
+	  }
+}
 
 Game.prototype.clients = function() {
 	var self = this;
@@ -75,6 +91,16 @@ Game.prototype.clients = function() {
 	});
 };
 
+Game.prototype.assignSealedToPlayers = function(){
+	for(var i=0; i < Object.keys(this.playerPiles).length;i++){
+		for(var j=0; j < 90;j++){
+			tempcard = this.pile.pop();
+			if(tempcard){
+				this.playerPiles[Object.keys(this.playerPiles)[i]].push(tempcard);
+			}
+		}
+	}
+}
 
 Game.prototype.assignPileToPlayer = function(pile_id, player){
 	nums = this.piles[pile_id].length;
@@ -99,7 +125,6 @@ Game.prototype.assignPileToPlayer = function(pile_id, player){
 		console.log(this.activePlayer);
 		return(0);
 	}
-
 }
 
 Game.prototype.reset = function() {
@@ -109,8 +134,8 @@ Game.prototype.reset = function() {
 	}
 };
 
-function loadPile(mode){
-	return util.initPile(90,mode);	
+function loadPile(mode,quantity){
+	return util.initPile(quantity,mode);	
 }
 
 Game.prototype.addToPiles = function(){

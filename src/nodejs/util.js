@@ -12,11 +12,18 @@ exports.getUniqueId = (function() {
 
 function getRandom(arr, size) {
   var copy = arr.slice(0), rand = [];
-  for (var i = 0; i < size && i < copy.length; i++) {
+console.log('my size is ');
+console.log(size);
+console.log('copy size is ');
+console.log(copy.length);
+  for (var i = 0; i < size ; i++) {
+  //for (var i = 0; i < size && i < copy.length; i++) {
     var index = Math.floor(Math.random() * copy.length);
     //console.log(copy.splice(index, 1)[0]);
     rand.push(copy.splice(index, 1)[0]);
   }
+	console.log('rand size is ');
+	console.log(rand.length);
   return rand;
 }
 
@@ -56,9 +63,9 @@ genpack = function(set){
   var y = getRandom(rarelist, 1);
   pack.push(y);
 
-	//make an exception for dragon's maze
+	//make an exception for dragon's maze. Fate Reforged too?
 	if(set == 'dgm'){
-		console.log('insering land');
+		console.log('inserting land');
 		var landlist = fs.readFileSync(set + 'lands.txt').toString().split("\n");
 		var y = getRandom(landlist, 1);
 		pack.push(y);

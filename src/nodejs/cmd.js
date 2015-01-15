@@ -117,6 +117,15 @@ COMMANDS.startGame = function(client, args){
 	}
 }
 
+COMMANDS.startGameSealed = function(client, args){
+	var g= game.clientsToGames[client];
+	g.startSealed(args.mode);
+	if(g.gameIsStarted){
+		COMMANDS.hideStartButton(client, args);
+	}
+	COMMANDS.updateView(client, args);
+}
+
 COMMANDS.hideStartButton = function(client,args){
 	var g = game.clientsToGames[client];
 	callalljs(g.clients(), ['hide_start_button', {}]);
