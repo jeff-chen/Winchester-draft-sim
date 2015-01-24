@@ -1,6 +1,6 @@
-Children of Korlis
 Elite Vanguard
 Isamaru, Hound of Konda
+Mardu Woe-Reaper
 Soldier of the Pantheon
 Student of Warfare
 Blade of the Sixth Pride
@@ -30,8 +30,8 @@ Lingering Souls
 Armageddon
 Day of Judgment
 Akroma's Vengeance
+Mastery of the Unseen
 Bound in Silence
-Mobilization
 Oblivion Ring
 Faith's Fetters
 Spear of Heliod
@@ -87,8 +87,8 @@ Bane of the Living
 Skinrender
 Shriekmaw
 Zombie Cutthroat
-Ink-Eyes, Servant of Oni
 Silent Specter
+Tasigur, the Golden Fang
 Avatar of Woe
 Liliana of the Veil
 Ob Nixilis of the Black Oath
@@ -96,7 +96,7 @@ Go for the Throat
 Smother
 Dismember
 Hero's Downfall
-Life Death
+Life // Death
 Thoughtseize
 Demonic Tutor
 Exhume
@@ -146,6 +146,7 @@ Birds of Paradise
 Experiment One
 Joraga Treespeaker
 Llanowar Elves
+Warden of the First Tree
 Wild Nacatl
 Wolfbitten Captive
 Beastbreaker of Bala Ged
@@ -158,7 +159,6 @@ Sylvan Caryatid
 Eternal Witness
 Reclamation Sage
 Troll Ascetic
-Uktabi Orangutan
 Blastoderm
 Chameleon Colossus
 Obstinate Baloth
@@ -196,7 +196,7 @@ Lotleth Troll
 Simic Sky Swallower
 Shardless Agent
 Ral Zarek
-Fire Ice
+Fire // Ice
 Figure of Destiny
 Goblin Trenches
 Copper Myr
@@ -208,9 +208,9 @@ Lore Seeker
 Silver Myr
 Steel Overseer
 Bottle Gnomes
+Deal Broker
 Palladium Myr
 Scuttlemutt
-Cogwork Librarian
 Lodestone Golem
 Masticore
 Solemn Simulacrum
@@ -279,5 +279,4 @@ Volcanic Island
 Volrath's Stronghold
 Watery Grave
 Windswept Heath
-Sentinel Dispatch
 Worldknit
