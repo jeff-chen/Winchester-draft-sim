@@ -1,0 +1,54 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'htmlparser' ]
+2 info using npm@1.1.59
+3 info using node@v0.8.8
+4 verbose read json /Users/smrtjenius/winston/winchester/package.json
+5 verbose read json /Users/smrtjenius/winston/winchester/node_modules/socket.io/package.json
+6 verbose from cache /Users/smrtjenius/winston/winchester/package.json
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'htmlparser', null ]
+9 silly cache add name=undefined spec="htmlparser" args=["htmlparser",null]
+10 verbose parsed url { pathname: 'htmlparser',
+10 verbose parsed url   path: 'htmlparser',
+10 verbose parsed url   href: 'htmlparser' }
+11 silly lockFile a0440dfb-htmlparser htmlparser
+12 verbose lock htmlparser /Users/smrtjenius/.npm/a0440dfb-htmlparser.lock
+13 silly lockFile a0440dfb-htmlparser htmlparser
+14 verbose addNamed [ 'htmlparser', '' ]
+15 verbose addNamed [ null, '' ]
+16 silly lockFile 343abc5d-htmlparser htmlparser@
+17 verbose lock htmlparser@ /Users/smrtjenius/.npm/343abc5d-htmlparser.lock
+18 silly addNameRange { name: 'htmlparser', range: '', hasData: false }
+19 verbose url raw htmlparser
+20 verbose url resolving [ 'https://registry.npmjs.org/', './htmlparser' ]
+21 verbose url resolved https://registry.npmjs.org/htmlparser
+22 info retry registry request attempt 1 at 14:24:29
+23 http GET https://registry.npmjs.org/htmlparser
+24 info retry will retry, error on last attempt: Error: SSL Error: CERT_UNTRUSTED
+25 info retry registry request attempt 2 at 14:24:39
+26 http GET https://registry.npmjs.org/htmlparser
+27 info retry will retry, error on last attempt: Error: SSL Error: CERT_UNTRUSTED
+28 info retry registry request attempt 3 at 14:25:39
+29 http GET https://registry.npmjs.org/htmlparser
+30 silly lockFile 343abc5d-htmlparser htmlparser@
+31 error Error: SSL Error: CERT_UNTRUSTED
+31 error     at ClientRequest.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/main.js:525:26)
+31 error     at ClientRequest.g (events.js:185:14)
+31 error     at ClientRequest.EventEmitter.emit (events.js:88:17)
+31 error     at HTTPParser.parserOnIncomingClient [as onIncoming] (http.js:1455:7)
+31 error     at HTTPParser.parserOnHeadersComplete [as onHeadersComplete] (http.js:111:23)
+31 error     at CleartextStream.socketOnData [as ondata] (http.js:1366:20)
+31 error     at CleartextStream.CryptoStream._push (tls.js:495:27)
+31 error     at SecurePair.cycle (tls.js:849:20)
+31 error     at EncryptedStream.CryptoStream.write (tls.js:230:13)
+31 error     at Socket.ondata (stream.js:38:26)
+32 error If you need help, you may report this log at:
+32 error     <http://github.com/isaacs/npm/issues>
+32 error or email it to:
+32 error     <npm-@googlegroups.com>
+33 error System Darwin 11.4.2
+34 error command "node" "/usr/local/bin/npm" "install" "htmlparser"
+35 error cwd /Users/smrtjenius/winston/winchester
+36 error node -v v0.8.8
+37 error npm -v 1.1.59
+38 verbose exit [ 1, true ]

@@ -64,7 +64,7 @@ genpack = function(set){
   pack.push(y);
 
 	//make an exception for dragon's maze. Fate Reforged too?
-	if(set == 'dgm'){
+	if(set == 'dgm' || set == 'frf'){
 		console.log('inserting land');
 		var landlist = fs.readFileSync(set + 'lands.txt').toString().split("\n");
 		var y = getRandom(landlist, 1);
@@ -81,11 +81,13 @@ draftformats =
    "dgm":["rtr","rtr","gtc","gtc","dgm","dgm"],
    "lrw":["lrw","lrw","lrw","mor","mor","mor"],
    "mma":["mma","mma","mma","mma","mma","mma"],
+   "frf":["ktk","ktk","ktk","frf","frf","frf"],
    "ths":["ths","ths","ths","ths","ths","ths"],
    "btg":["ths","ths","ths","btg","btg","btg"],
    "ktk":["ktk","ktk","ktk","ktk","ktk","ktk"],
    "m15":["m15","m15","m15","m15","m15","m15"],
-   "scg":["scg","scg","scg","scg","scg","scg"]
+   "scg":["scg","scg","scg","scg","scg","scg"],
+   "dtk":["dtk","dtk","dtk","dtk","frf","frf"]
 }
 
 

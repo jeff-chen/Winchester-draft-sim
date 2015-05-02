@@ -127,21 +127,21 @@ function update_all_piles(json){
 	}
 }
 
-function cardize(text){
+/*function cardize(text){
 	stuff = '<img src=\"http://mtgimage.com/card/'
 	 + text
 	 + '.jpg\" class=\"mtgcard\"">'
 	return(stuff);
-}
-/*function cardize(text,offset){
+}*/
+function cardize(text){
 	//alert(offset);
 	stuff = '<img src=\"http://gatherer.wizards.com/Handlers/Image.ashx?size=small&type=card&name='
 	 + text 
-	 + '&options=\" style=\"position:absolute; top:' + (offset*40+60) + 'px; z-index:' + offset + '\">'
+	 + '&options=\">'//' style=\"position:absolute; top:' + (offset*40+60) + 'px; z-index:' + offset + '\">'
 	//alert(stuff);
 	return(stuff);
 	//return('<label><a href=\"#\" class=\"mtgcard\" onmouseover=>' + text + '</a><br/></label>');
-}*/
+}
 
 function update_player_piles(json){
 	pilenametype = '#cardstaken';
@@ -149,8 +149,8 @@ function update_player_piles(json){
 	$(pilenametype + ' > label').remove();	
 	$(pilenametype + ' > br').remove();
 	for(var j in json.playerspile){
-		$(pilenametype).append(cardize(json.playerspile[j]));
-		//$(pilenametype).append(cardize(json.playerspile[j],j));
+		//$(pilenametype).append(cardize(json.playerspile[j]));
+		$(pilenametype).append(cardize(json.playerspile[j],j));
 		//$(pilenametype).append('<label><a href=\"\" class=\"mtgcard\" target=\"_blank\">' + json.playerspile[j] + '</a><br/></label>');
 	}
 	for(var j in json.playerspile){

@@ -71,7 +71,7 @@ Game.prototype.start = function(mode){
 Game.prototype.startSealed = function(mode){
 		console.log('starting');
 		console.log(this.playerPiles);
-		if(!this.gameIsStarted && Object.keys(this.playerPiles).length > 1){
+		if(!this.gameIsStarted){
 	  	this.gameIsStarted = 1;
 	  	this.pile = loadPile(mode,180); //90 per player.
 	    console.log('omghai');
