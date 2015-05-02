@@ -44,7 +44,7 @@ Vendilion Clique
 Kheru Spellsnatcher
 Venser, Shaper Savant
 Chromeshell Crab
-Mischievous Quanar
+Stratus Dancer
 Mulldrifter
 Vesuvan Shapeshifter
 Aetherling
@@ -116,7 +116,7 @@ Stromkirk Noble
 Ember Hauler
 Goblin Wardriver
 Gore-House Chainwalker
-Mogg War Marshal
+Dragon Fodder
 Sparksmith
 Goblin Chieftain
 Keldon Vandals
@@ -132,7 +132,7 @@ Incinerate
 Lightning Strike
 Magma Jet
 Shattering Pulse
-Blast from the Past
+Roast
 Stoke the Flames
 Firebolt
 Slagstorm
@@ -279,4 +279,5 @@ Volcanic Island
 Volrath's Stronghold
 Watery Grave
 Windswept Heath
-Worldknit
+Siege Rhino
+Silumgar Assassin
